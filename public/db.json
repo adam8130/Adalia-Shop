@@ -1,0 +1,597 @@
+{
+    "productTips": {
+        "tips": [
+            "- 產品皆為國外正品公司貨",
+            "- 版型都會偏大可參考尺寸表",
+            "- 產品皆有附防塵袋",
+            "- 疫情期間所有商品已消毒請安心"
+        ],
+        "campaigns": [
+            "全館滿2000千現折300元"
+        ]
+    },
+    "products": [
+        {
+            "productName": "Retainicer",
+            "productSeries": "春夏新系列",
+            "productID": "201",
+            "images": [
+                {
+                    "url": "https://images.unsplash.com/photo-1523359346063-d879354c0ea5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1516828474992-30ba120acb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                }
+            ],
+            "price": 650,
+            "description": "",
+            "availableSize": [
+                {
+                    "size": "S",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 5
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "XL",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 8
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            "productName": "Dessiey",
+            "productSeries": "春夏新系列",
+            "productID": "202",
+            "images": [
+                {
+                    "url": "https://images.unsplash.com/photo-1583744999783-efe9dc5eac91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=80"
+                }
+            ],
+            "price": 950,
+            "description": "",
+            "availableSize": [
+                {
+                    "size": "S",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 5
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "XL",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 8
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            "productName": "kaleamorgan",
+            "productSeries": "春夏新系列",
+            "productID": "203",
+            "images": [
+                {
+                    "url": "https://images.unsplash.com/photo-1517267367903-519607b9060c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1517191297489-48c463380e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                }
+            ],
+            "price": 1250,
+            "description": "",
+            "availableSize": [
+                {
+                    "size": "S",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 5
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "XL",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 8
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            "productName": "Leuraos",
+            "productSeries": "春夏新系列",
+            "productID": "204",
+            "images": [
+                {
+                    "url": "https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                }
+            ],
+            "price": 890,
+            "description": "",
+            "availableSize": [
+                {
+                    "size": "S",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 5
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "XL",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 8
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            "productName": "Strivaces",
+            "productSeries": "春夏新系列",
+            "productID": "205",
+            "images": [
+                {
+                    "url": "https://images.unsplash.com/photo-1627225793904-a2f900a6e4cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                }
+            ],
+            "price": 680,
+            "description": "",
+            "availableSize": [
+                {
+                    "size": "S",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 5
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "XL",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 8
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                }                
+            ]
+        },
+        {
+            "productName": "Saieyer",
+            "productSeries": "春夏新系列",
+            "productID": "206",
+            "images": [
+                {
+                    "url": "https://images.unsplash.com/photo-1589742117142-4c08de5aabcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                },
+                {
+                    "url": "https://images.unsplash.com/photo-1589742067167-9683bf95ab54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                }
+            ],
+            "price": 950,
+            "description": "",
+            "availableSize": [
+                {
+                    "size": "S",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 10
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 5
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 5
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "XL",
+                    "stock": [
+                        { 
+                            "color": "白色",
+                            "backgroundColor": "white",
+                            "stock": 10                        
+                        },
+                        {
+                            "color": "黑色",
+                            "backgroundColor": "black",
+                            "stock": 8
+                        },
+                        {
+                            "color": "灰色",
+                            "backgroundColor": "rgb(128, 128, 128)",
+                            "stock": 10
+                        }
+                    ]
+                }                
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+schema:
+  - 'schema.graphql'
+config:
+  # to make SupportedExchange in manual order
+  sort: false 
+documents:
+  - 'modules/**/*.graphql'
+generates:
+  __generated__/types.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      preResolveTypes: true
+      withHooks: true
+  __generated__/fragment-matcher.ts:
+    plugins:
+      - 'fragment-matcher'
+  lib/typePoliciesType.ts:
+    plugins:
+      - 'typescript-apollo-client-helpers'
+  __generated__/mocks.ts:
+    plugins:
+      - typescript-mock-data:
+          typesFile: './types.ts'
+          terminateCircularRelationships: true
+hooks:
+  afterOneFileWrite:
+    - eslint --fix
+    - prettier --write

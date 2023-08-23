@@ -1,0 +1,41 @@
+type Image {
+  url: String!
+}
+type ProductTips {
+  tips: [String!]!
+  campaigns: [String!]!
+}
+type AvailableColor {
+  color: String
+  backgroundColor: String
+  stock: Int
+}
+type AvailableSize {
+  size: String
+  stock: [AvailableColor]
+}
+type Product {
+  productName: String!
+  productID: String!
+  productSeries: String!
+  images: [Image!]!
+  price: Int!
+  description: String
+  availableSize: [AvailableSize!]
+  availableColor: [AvailableColor!]
+}
+type CartContent {
+  productID: String
+  productName: String
+  productThumbnail: String
+  selectedSize: String
+  selectedColor: String
+  selectedQuantity: Int
+  totalPrice: Int
+  isPreviouslyAdded: Boolean
+}
+type Query {
+  getProductDetail(productID: String!): Product
+  getAllProducts: [Product!]!
+  getProductTips: ProductTips
+}

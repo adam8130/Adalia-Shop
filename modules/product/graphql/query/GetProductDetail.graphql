@@ -1,0 +1,20 @@
+query GetProductDetail($productID: String!) {
+  getProductDetail(productID: $productID) {
+    productName
+    productID
+    productSeries
+    images {
+      url
+    }
+    price
+    description
+    availableSize {
+      size
+      stock {
+        color
+        backgroundColor
+        stock
+      }
+    }
+  }
+}
