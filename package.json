@@ -7,6 +7,7 @@
     "server": "nodemon server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
+    "pm2": "cross-env NODE_ENV=production pm2 start server.js --name AdaliaShop-Server",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
     "codegen": "graphql-codegen"
