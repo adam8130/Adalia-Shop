@@ -2,21 +2,21 @@ import { Button, Stack, styled, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 const Root = styled("div")(
-  () => `
+  ({ mobile }: {mobile: Number}) => `
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px 40px;
+    padding: ${mobile ? '20px 10px' : '20px 40px'};
     gap: 10px;
 `,
 );
 const MainSection = styled("div")(
-  ({ isMobile }: {isMobile: boolean}) => `
+  ({ mobile }: {mobile: Number}) => `
     width: 100%;
     position: relative;
     img {
         width: 100%;
-        height: ${isMobile ? "400px" : "550px"};
+        height: ${mobile ? "300px" : "550px"};
         object-fit: cover;
         object-position: center -40px;
     }
@@ -46,23 +46,23 @@ const MainSection = styled("div")(
 `,
 );
 const SubSection = styled(Stack)(
-  ({ isMobile }: { isMobile: boolean }) => `
+  ({ mobile }: { mobile: Number }) => `
     width: 100%;
     display: flex;
-    flex-direction: ${isMobile ? "column" : "row"};
+    flex-direction: ${mobile ? "column" : "row"};
     overflow: hidden;
     gap: 10px;
 `,
 );
 const SubItem = styled("div")(
-  () => `
+  ({ mobile }: { mobile: Number }) => `
     flex: 1;
     height: 320px;
     overflow: hidden;
     position: relative;
     img {
         width: 100%;
-        height: 380px;
+        height: ${mobile ? "200px" : "300px"};
         object-fit: cover;
         object-position: center center;
         transition: all 0.2s;
@@ -100,8 +100,8 @@ function BannerWall() {
   const isMobile = useMediaQuery("(max-width:768px)");
 
   return (
-    <Root>
-      <MainSection isMobile={isMobile}>
+    <Root mobile={Number(isMobile)}>
+      <MainSection mobile={Number(isMobile)}>
         <Image
           src="/images/Banner01.png"
           width={600}
@@ -115,12 +115,12 @@ function BannerWall() {
           <Button variant="outlined">SHOP NOW</Button>
         </div>
       </MainSection>
-      <SubSection isMobile={isMobile}>
-        <SubItem>
+      <SubSection mobile={Number(isMobile)}>
+        <SubItem mobile={Number(isMobile)}>
           <Image
             src="/images/Banner02.png"
             width={600}
-            height={400}
+            height={300}
             priority
             alt="春夏新品上市"
           />
@@ -129,11 +129,11 @@ function BannerWall() {
             <div className="content">美好新生活提案，春夏新品上市</div>
           </div>
         </SubItem>
-        <SubItem>
+        <SubItem mobile={Number(isMobile)}>
           <Image
             src="/images/Banner03.png"
             width={600}
-            height={400}
+            height={300}
             priority
             alt="春夏新品上市"
           />

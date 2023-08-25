@@ -11,7 +11,7 @@ import { useGetAllProductQuery } from '@/__generated__/types';
 function App() {
   const { loading, data, error } = useGetAllProductQuery()
 
-  if (loading) return <Loading />;
+  if (loading && !data) return <Loading />;
   return (
     <>
       <Head>

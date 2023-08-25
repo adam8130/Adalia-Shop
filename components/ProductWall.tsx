@@ -109,8 +109,8 @@ function ProductWall({
                             <div ref={(ref: HTMLDivElement) => {
                                 !refsArray.includes(ref) && setRefsArray((prev) => [...prev, ref])
                             }}>
-                                <Image src={item.images[0].url} width={300} height={450} alt={item.productName} />
-                                <Image src={item.images[1].url} width={300} height={450} alt={item.productName} />
+                                <Image src={item.images[0].url} width={300} height={450} priority alt={item.productName} />
+                                <Image src={item.images[1].url} width={300} height={450} priority alt={item.productName} />
                             </div>
                             <span>{item.productSeries}</span>
                             <h3>{item.productName}</h3>

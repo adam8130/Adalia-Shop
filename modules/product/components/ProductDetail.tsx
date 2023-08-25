@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ProductTips, Product } from "@/__generated__/types";
-import { Button, Grid, Stack, styled } from "@mui/material";
+import { Button, Grid, Stack, styled, useMediaQuery } from "@mui/material";
 import { useStore } from "@/store";
 import { motion } from "framer-motion";
 import { Observer } from "mobx-react-lite";
@@ -11,9 +11,9 @@ const RootGrid = styled(Grid)`
   margin: auto;
   display: flex;
 `;
-const ImagesGrid = styled(Grid)`
+const ImagesGrid = styled(Grid)(({ mobile }: { mobile: Number }) => `
   width: 100%;
-  height: 550px;
+  height: ${mobile ? '400px' : '550px'};
   display: flex;
   margin: 20px 0;
   justify-content: center;
@@ -25,14 +25,14 @@ const ImagesGrid = styled(Grid)`
     position: relative;
     img {
       width: 400px;
-      height: 550px;
+      height: ${mobile ? '400px' : '550px'};
       position: absolute;
       top: 0;
       left: 0;
       transition: all 0.5s;
     }
   }
-`;
+`);
 const ThumbnailPannel = styled("div")`
   display: flex;
   flex-direction: column;
@@ -109,6 +109,7 @@ export function ProductDetail({
   product: Product;
   productTips: ProductTips;
 }) {
+  const isMobile = useMediaQuery("(max-width:768px)");
   const { setCartContent, setCartVisible } = useStore();
   const [currentProductIdx, setCurrentProductIdx] = useState(0);
   const [currentSizeIdx, setCurrentSizeIdx] = useState(0);
@@ -119,7 +120,7 @@ export function ProductDetail({
     <Observer>
       {() => (
         <RootGrid container>
-          <ImagesGrid item sm={12} md={7}>
+          <ImagesGrid item sm={12} md={7} mobile={Number(isMobile)}>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               {product.images.map((item, idx) => (
                 <Image
@@ -127,6 +128,7 @@ export function ProductDetail({
                   src={item.url}
                   width={400}
                   height={550}
+                  priority
                   alt={product.productName}
                   style={{ opacity: idx === currentProductIdx ? 1 : 0 }}
                 />
@@ -139,6 +141,7 @@ export function ProductDetail({
                   src={item.url}
                   width={100}
                   height={150}
+                  priority
                   alt={product.productName}
                   onClick={() => setCurrentProductIdx(idx)}
                 />

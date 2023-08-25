@@ -8,29 +8,26 @@ export default function Home({ data }: { data: Product[] }) {
   return (
     <>
       <BannerWall />
-      <FieldCard title="More simple, More Details">
+      <FieldCard title="More Simpler Yet Detailed">
         <p>
-          In 2015, a group of girls with different cultural backgrounds met in
-          New York City.
+          In 2018, diverse young women converged in New York City.
           <br />
-          The love of vintage clothes connected them and sparked an idea to
-          create a brand they wanted to wear themselves.
+          Their shared passion for vintage fashion led to the inception of a
+          brand, embodying their own style and ideals.
         </p>
       </FieldCard>
       <ProductWall displayAmount={6} productList={data} />
-      <FieldCard title="More simple, More Details">
+      <FieldCard title="Vintage Love, Modern Spirit">
         <p>
-          In 2015, a group of girls with different cultural backgrounds met in
-          New York City.
+          The streets of New York City, 2015, saw the union of creative minds
+          from various walks of life.
           <br />
-          The love of vintage clothes connected them and sparked an idea to
-          create a brand they wanted to wear themselves.
+          Together, driven by a shared admiration for vintage fashion, they
+          envisioned a brand that resonated with the modern woman.
         </p>
       </FieldCard>
-      <DiscountCard 
-        background={
-          `url(https://images.unsplash.com/photo-1620890186094-1f3caf481295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1901&q=80)`
-        }
+      <DiscountCard
+        background={`url(https://images.unsplash.com/photo-1620890186094-1f3caf481295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1901&q=80)`}
       />
     </>
   );

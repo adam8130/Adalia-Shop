@@ -61,7 +61,7 @@ const Logobar = styled("div")`
   }
   .MuiButtonBase-root {
     position: absolute;
-    right: 30px;
+    right: 20px;
     border-radius: 5px;
     border: 1px solid gray;
     margin: 10px 0;
@@ -97,8 +97,8 @@ const Menubar = styled("ul")`
   }
 `;
 const MotionedMobileMenubar = motion(styled("div")`
-  width: 50%;
-  height: 100vh;
+  width: 60%;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,8 +109,8 @@ const MotionedMobileMenubar = motion(styled("div")`
   z-index: 100;
   background: white;
   li {
-    width: 70%;
-    padding: 20px 0;
+    width: 75%;
+    padding: 15px 0;
     margin-right: auto;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.55);

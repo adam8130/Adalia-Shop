@@ -11,21 +11,21 @@ import { useGetProductDetailQuery, useGetProductTipsQuery, Product, ProductTips 
 function ProductPage() {
   const router = useRouter();
   const productID = router.query.item;
-  const { data: productTips } = useGetProductTipsQuery();
-  const { loading, data: product, error } = useGetProductDetailQuery({
+  const { loading: tipsLoaded, data: productTips } = useGetProductTipsQuery();
+  const { loading: dataLoaded, data: product } = useGetProductDetailQuery({
     variables: { productID: productID as string },
   });
 
-  if (loading) return <Loading />;
+  if (tipsLoaded && dataLoaded && !product) return <Loading />;
 
   return (
     <>
       <Head>
         <title key="title">Adalia | Product Detail</title>
       </Head>
-      {product &&
+      {product && productTips &&
         <ProductHome 
-          product={product.getProductDetail as Product} 
+          product={product?.getProductDetail as Product} 
           productTips={(productTips?.getProductTips as ProductTips)} 
         />
       }
