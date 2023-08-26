@@ -1,10 +1,13 @@
 import {
   Image,
-  ProductTips,
+  ShopSettings,
   AvailableColor,
   AvailableSize,
   Product,
+  AllProductGroup,
   CartContent,
+  RelatedProducts,
+  ProductDetail,
   Query,
 } from "./types";
 
@@ -20,21 +23,33 @@ export const anImage = (
   };
 };
 
-export const aProductTips = (
-  overrides?: Partial<ProductTips>,
+export const aShopSettings = (
+  overrides?: Partial<ShopSettings>,
   _relationshipsToOmit: Set<string> = new Set(),
-): ProductTips => {
+): ShopSettings => {
   const relationshipsToOmit: Set<string> = new Set(_relationshipsToOmit);
-  relationshipsToOmit.add("ProductTips");
+  relationshipsToOmit.add("ShopSettings");
   return {
-    tips:
-      overrides && overrides.hasOwnProperty("tips")
-        ? overrides.tips!
-        : ["eaque"],
-    campaigns:
-      overrides && overrides.hasOwnProperty("campaigns")
-        ? overrides.campaigns!
-        : ["corrupti"],
+    menubarItems:
+      overrides && overrides.hasOwnProperty("menubarItems")
+        ? overrides.menubarItems!
+        : ["temporibus"],
+    payment:
+      overrides && overrides.hasOwnProperty("payment")
+        ? overrides.payment!
+        : ["dicta"],
+    delivery:
+      overrides && overrides.hasOwnProperty("delivery")
+        ? overrides.delivery!
+        : ["provident"],
+    shopTips:
+      overrides && overrides.hasOwnProperty("shopTips")
+        ? overrides.shopTips!
+        : ["odio"],
+    shopCampaigns:
+      overrides && overrides.hasOwnProperty("shopCampaigns")
+        ? overrides.shopCampaigns!
+        : ["eum"],
   };
 };
 
@@ -91,24 +106,34 @@ export const aProduct = (
       overrides && overrides.hasOwnProperty("productID")
         ? overrides.productID!
         : "et",
-    productSeries:
-      overrides && overrides.hasOwnProperty("productSeries")
-        ? overrides.productSeries!
-        : "delectus",
-    images:
-      overrides && overrides.hasOwnProperty("images")
-        ? overrides.images!
+    productSeriesEN:
+      overrides && overrides.hasOwnProperty("productSeriesEN")
+        ? overrides.productSeriesEN!
+        : "quia",
+    productSeriesZH:
+      overrides && overrides.hasOwnProperty("productSeriesZH")
+        ? overrides.productSeriesZH!
+        : "fugiat",
+    productImages:
+      overrides && overrides.hasOwnProperty("productImages")
+        ? overrides.productImages!
         : [
             relationshipsToOmit.has("Image")
               ? ({} as Image)
               : anImage({}, relationshipsToOmit),
           ],
-    price:
-      overrides && overrides.hasOwnProperty("price") ? overrides.price! : 5007,
-    description:
-      overrides && overrides.hasOwnProperty("description")
-        ? overrides.description!
-        : "qui",
+    productPrice:
+      overrides && overrides.hasOwnProperty("productPrice")
+        ? overrides.productPrice!
+        : 3295,
+    productDescription:
+      overrides && overrides.hasOwnProperty("productDescription")
+        ? overrides.productDescription!
+        : "maxime",
+    availableCampaigns:
+      overrides && overrides.hasOwnProperty("availableCampaigns")
+        ? overrides.availableCampaigns!
+        : 2.85,
     availableSize:
       overrides && overrides.hasOwnProperty("availableSize")
         ? overrides.availableSize!
@@ -124,6 +149,28 @@ export const aProduct = (
             relationshipsToOmit.has("AvailableColor")
               ? ({} as AvailableColor)
               : anAvailableColor({}, relationshipsToOmit),
+          ],
+  };
+};
+
+export const anAllProductGroup = (
+  overrides?: Partial<AllProductGroup>,
+  _relationshipsToOmit: Set<string> = new Set(),
+): AllProductGroup => {
+  const relationshipsToOmit: Set<string> = new Set(_relationshipsToOmit);
+  relationshipsToOmit.add("AllProductGroup");
+  return {
+    series:
+      overrides && overrides.hasOwnProperty("series")
+        ? overrides.series!
+        : "eaque",
+    products:
+      overrides && overrides.hasOwnProperty("products")
+        ? overrides.products!
+        : [
+            relationshipsToOmit.has("Product")
+              ? ({} as Product)
+              : aProduct({}, relationshipsToOmit),
           ],
   };
 };
@@ -170,6 +217,60 @@ export const aCartContent = (
   };
 };
 
+export const aRelatedProducts = (
+  overrides?: Partial<RelatedProducts>,
+  _relationshipsToOmit: Set<string> = new Set(),
+): RelatedProducts => {
+  const relationshipsToOmit: Set<string> = new Set(_relationshipsToOmit);
+  relationshipsToOmit.add("RelatedProducts");
+  return {
+    productID:
+      overrides && overrides.hasOwnProperty("productID")
+        ? overrides.productID!
+        : "cumque",
+    productName:
+      overrides && overrides.hasOwnProperty("productName")
+        ? overrides.productName!
+        : "enim",
+    productImages:
+      overrides && overrides.hasOwnProperty("productImages")
+        ? overrides.productImages!
+        : [
+            relationshipsToOmit.has("Image")
+              ? ({} as Image)
+              : anImage({}, relationshipsToOmit),
+          ],
+    productPrice:
+      overrides && overrides.hasOwnProperty("productPrice")
+        ? overrides.productPrice!
+        : 8894,
+  };
+};
+
+export const aProductDetail = (
+  overrides?: Partial<ProductDetail>,
+  _relationshipsToOmit: Set<string> = new Set(),
+): ProductDetail => {
+  const relationshipsToOmit: Set<string> = new Set(_relationshipsToOmit);
+  relationshipsToOmit.add("ProductDetail");
+  return {
+    product:
+      overrides && overrides.hasOwnProperty("product")
+        ? overrides.product!
+        : relationshipsToOmit.has("Product")
+        ? ({} as Product)
+        : aProduct({}, relationshipsToOmit),
+    relatedProducts:
+      overrides && overrides.hasOwnProperty("relatedProducts")
+        ? overrides.relatedProducts!
+        : [
+            relationshipsToOmit.has("RelatedProducts")
+              ? ({} as RelatedProducts)
+              : aRelatedProducts({}, relationshipsToOmit),
+          ],
+  };
+};
+
 export const aQuery = (
   overrides?: Partial<Query>,
   _relationshipsToOmit: Set<string> = new Set(),
@@ -177,25 +278,49 @@ export const aQuery = (
   const relationshipsToOmit: Set<string> = new Set(_relationshipsToOmit);
   relationshipsToOmit.add("Query");
   return {
-    getProductDetail:
-      overrides && overrides.hasOwnProperty("getProductDetail")
-        ? overrides.getProductDetail!
-        : relationshipsToOmit.has("Product")
-        ? ({} as Product)
-        : aProduct({}, relationshipsToOmit),
-    getAllProducts:
-      overrides && overrides.hasOwnProperty("getAllProducts")
-        ? overrides.getAllProducts!
+    getShopSettings:
+      overrides && overrides.hasOwnProperty("getShopSettings")
+        ? overrides.getShopSettings!
+        : relationshipsToOmit.has("ShopSettings")
+        ? ({} as ShopSettings)
+        : aShopSettings({}, relationshipsToOmit),
+    getSpringSeries:
+      overrides && overrides.hasOwnProperty("getSpringSeries")
+        ? overrides.getSpringSeries!
         : [
             relationshipsToOmit.has("Product")
               ? ({} as Product)
               : aProduct({}, relationshipsToOmit),
           ],
-    getProductTips:
-      overrides && overrides.hasOwnProperty("getProductTips")
-        ? overrides.getProductTips!
-        : relationshipsToOmit.has("ProductTips")
-        ? ({} as ProductTips)
-        : aProductTips({}, relationshipsToOmit),
+    getAutumnSeries:
+      overrides && overrides.hasOwnProperty("getAutumnSeries")
+        ? overrides.getAutumnSeries!
+        : [
+            relationshipsToOmit.has("Product")
+              ? ({} as Product)
+              : aProduct({}, relationshipsToOmit),
+          ],
+    getNewArrivalsSeries:
+      overrides && overrides.hasOwnProperty("getNewArrivalsSeries")
+        ? overrides.getNewArrivalsSeries!
+        : [
+            relationshipsToOmit.has("Product")
+              ? ({} as Product)
+              : aProduct({}, relationshipsToOmit),
+          ],
+    getAllProducts:
+      overrides && overrides.hasOwnProperty("getAllProducts")
+        ? overrides.getAllProducts!
+        : [
+            relationshipsToOmit.has("AllProductGroup")
+              ? ({} as AllProductGroup)
+              : anAllProductGroup({}, relationshipsToOmit),
+          ],
+    getProductDetail:
+      overrides && overrides.hasOwnProperty("getProductDetail")
+        ? overrides.getProductDetail!
+        : relationshipsToOmit.has("ProductDetail")
+        ? ({} as ProductDetail)
+        : aProductDetail({}, relationshipsToOmit),
   };
 };

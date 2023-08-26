@@ -1,6 +1,0 @@
-query GetProductTips {
-  getProductTips {
-    tips
-    campaigns
-  }
-}

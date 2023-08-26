@@ -6,18 +6,19 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Home from '@/modules/home/Home';
 import Loading from '@/components/Loading';
-import { useGetAllProductQuery } from '@/__generated__/types';
+import { useGetAllProductsQuery } from '@/__generated__/types';
 
 function App() {
-  const { loading, data, error } = useGetAllProductQuery()
+  const { loading, data, error } = useGetAllProductsQuery()
 
   if (loading && !data) return <Loading />;
+  console.log(error)
   return (
     <>
       <Head>
         <title key="title">Adalia | Home</title>
       </Head>
-      {data && <Home data={data.getAllProducts} /> }
+      {data && <Home allProducts={data.getAllProducts} /> }
     </>
   )
 }

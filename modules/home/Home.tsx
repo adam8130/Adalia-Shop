@@ -2,9 +2,9 @@ import BannerWall from "@/components/BannerWall";
 import ProductWall from "@/components/ProductWall";
 import DiscountCard from "@/components/DiscountCard";
 import FieldCard from "@/components/FieldCard";
-import { Product } from "@/__generated__/types";
+import { AllProductGroup } from "@/__generated__/types";
 
-export default function Home({ data }: { data: Product[] }) {
+export default function Home({ allProducts }: { allProducts: AllProductGroup[] }) {
   return (
     <>
       <BannerWall />
@@ -16,7 +16,7 @@ export default function Home({ data }: { data: Product[] }) {
           brand, embodying their own style and ideals.
         </p>
       </FieldCard>
-      <ProductWall displayAmount={6} productList={data} />
+      <ProductWall displayAmount={6} productList={allProducts} />
       <FieldCard title="Vintage Love, Modern Spirit">
         <p>
           The streets of New York City, 2015, saw the union of creative minds

@@ -1,0 +1,596 @@
+[
+  {
+      "productName": "Retainicer",
+      "productSeriesEN": "SPRING",
+      "productSeriesZH": "春夏新系列",
+      "productID": "201",
+      "productImages": [
+          {
+              "url": "https://images.unsplash.com/photo-1523359346063-d879354c0ea5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+          },
+          {
+              "url": "https://images.unsplash.com/photo-1516828474992-30ba120acb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+          }
+      ],
+      "productPrice": 650,
+      "description": "Experience the magic of summer sunsets with our Sunset Orange Summer Dress. Made with lightweight materials, the enchanting orange gradient captures the essence of summer evenings. Ideal for beach getaways or picnics, it's a sun-lover's dream.",
+      "availableCampaigns": 0.8,
+      "availableSize": [
+          {
+              "size": "S",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "M",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "L",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 5
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          },
+          {
+              "size": "XL",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 8
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          }                
+      ]
+  },
+  {
+      "productName": "Dessiey",
+      "productSeriesEN": "SPRING",
+      "productSeriesZH": "春夏新系列",
+      "productID": "202",
+      "productImages": [
+          {
+              "url": "https://images.unsplash.com/photo-1583744999783-efe9dc5eac91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+          },
+          {
+              "url": "https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=80"
+          }
+      ],
+      "productPrice": 950,
+      "description": "Enliven your wardrobe with our Chic Floral Blouse. Decorated with delicate floral patterns, it sports puffed sleeves and a tie-up collar that adds a dash of femininity to your work or casual look.",
+      "availableCampaigns": 1,
+      "availableSize": [
+          {
+              "size": "S",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "M",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "L",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 5
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          },
+          {
+              "size": "XL",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 8
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          }                
+      ]
+  },
+  {
+      "productName": "kaleamorgan",
+      "productSeriesEN": "SPRING",
+      "productSeriesZH": "春夏新系列",
+      "productID": "203",
+      "productImages": [
+          {
+              "url": "https://images.unsplash.com/photo-1517267367903-519607b9060c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+          },
+          {
+              "url": "https://images.unsplash.com/photo-1517191297489-48c463380e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+          }
+      ],
+      "productPrice": 1250,
+      "description": "Sculpt your silhouette with our High-Waist Pencil Skirt. Offered in classic black, its contour-enhancing fit is perfect for those power meetings or elegant dinners. Its soft material ensures comfort while exuding grace.",
+      "availableCampaigns": 1,
+      "availableSize": [
+          {
+              "size": "S",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "M",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "L",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 5
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          },
+          {
+              "size": "XL",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 8
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          }                
+      ]
+  },
+  {
+      "productName": "Leuraos",
+      "productSeriesEN": "SPRING",
+      "productSeriesZH": "春夏新系列",
+      "productID": "204",
+      "productImages": [
+          {
+              "url": "https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+          },
+          {
+              "url": "https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+          }
+      ],
+      "productPrice": 890,
+      "description": "Elegant Lace Maxi Dress: Walk with grace in our Elegant Lace Maxi Dress. Crafted from the finest lace, this dress radiates romance. Perfect for formal occasions, it whispers tales of elegance with every step.",
+      "availableCampaigns": 1,
+      "availableSize": [
+          {
+              "size": "S",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "M",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "L",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 5
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          },
+          {
+              "size": "XL",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 8
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          }                
+      ]
+  },
+  {
+      "productName": "Strivaces",
+      "productSeriesEN": "SPRING",
+      "productSeriesZH": "春夏新系列",
+      "productID": "205",
+      "productImages": [
+          {
+              "url": "https://images.unsplash.com/photo-1627225793904-a2f900a6e4cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+          },
+          {
+              "url": "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+          }
+      ],
+      "productPrice": 680,
+      "description": "Relive the charm of yesteryears with our Retro Polka-Dot Jumpsuit. With its vintage-inspired design and relaxed fit, it's the perfect blend of comfort and style for those laid-back days.",
+      "availableCampaigns": 1,
+      "availableSize": [
+          {
+              "size": "S",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "M",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "L",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 5
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          },
+          {
+              "size": "XL",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 8
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          }                
+      ]
+  },
+  {
+      "productName": "Saieyer",
+      "productSeriesEN": "SPRING",
+      "productSeriesZH": "春夏新系列",
+      "productID": "206",
+      "productImages": [
+          {
+              "url": "https://images.unsplash.com/photo-1589742117142-4c08de5aabcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+          },
+          {
+              "url": "https://images.unsplash.com/photo-1589742067167-9683bf95ab54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+          }
+      ],
+      "productPrice": 950,
+      "description": "White Embroidered Cardigan: Embrace the breezy spring and summer with our White Embroidered Cardigan. Its delicate embroidery details promise a touch of sophistication, making it a perfect layer for those slightly chilly evenings.",
+      "availableCampaigns": 1,
+      "availableSize": [
+          {
+              "size": "S",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "M",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 10
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 5
+                  }
+              ]
+          },
+          {
+              "size": "L",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 5
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          },
+          {
+              "size": "XL",
+              "stock": [
+                  { 
+                      "color": "白色",
+                      "backgroundColor": "white",
+                      "stock": 10                        
+                  },
+                  {
+                      "color": "黑色",
+                      "backgroundColor": "black",
+                      "stock": 8
+                  },
+                  {
+                      "color": "灰色",
+                      "backgroundColor": "rgb(128, 128, 128)",
+                      "stock": 10
+                  }
+              ]
+          }                
+      ]
+  }
+]

@@ -1,6 +1,7 @@
-query GetProductDetail($productID: String!, $productSeriesEN: String!) {
-  getProductDetail(productID: $productID, productSeriesEN: $productSeriesEN) {
-    product {
+query GetAllProducts {
+  getAllProducts {
+    series
+    products {
       productName
       productID
       productSeriesEN
@@ -18,14 +19,6 @@ query GetProductDetail($productID: String!, $productSeriesEN: String!) {
           stock
         }
       }
-    }
-    relatedProducts {
-      productID
-      productName
-      productImages {
-        url
-      }
-      productPrice
     }
   }
 }

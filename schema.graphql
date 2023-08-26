@@ -1,29 +1,44 @@
 type Image {
   url: String!
 }
-type ProductTips {
-  tips: [String!]!
-  campaigns: [String!]!
+
+type ShopSettings {
+  menubarItems: [String!]
+  payment: [String!]
+  delivery: [String!]
+  shopTips: [String]
+  shopCampaigns: [String]
 }
+
 type AvailableColor {
   color: String
   backgroundColor: String
   stock: Int
 }
+
 type AvailableSize {
   size: String
   stock: [AvailableColor]
 }
+
 type Product {
   productName: String!
   productID: String!
-  productSeries: String!
-  images: [Image!]!
-  price: Int!
-  description: String
+  productSeriesEN: String!
+  productSeriesZH: String!
+  productImages: [Image!]!
+  productPrice: Int!
+  productDescription: String
+  availableCampaigns: Float
   availableSize: [AvailableSize!]
   availableColor: [AvailableColor!]
 }
+
+type AllProductGroup {
+  series: String!
+  products: [Product!]!
+}
+
 type CartContent {
   productID: String
   productName: String
@@ -34,8 +49,24 @@ type CartContent {
   totalPrice: Int
   isPreviouslyAdded: Boolean
 }
+
+type RelatedProducts {
+  productID: String
+  productName: String
+  productImages: [Image]
+  productPrice: Int
+}
+
+type ProductDetail {
+  product: Product
+  relatedProducts: [RelatedProducts]
+}
+
 type Query {
-  getProductDetail(productID: String!): Product
-  getAllProducts: [Product!]!
-  getProductTips: ProductTips
+  getShopSettings: ShopSettings
+  getSpringSeries: [Product!]!
+  getAutumnSeries: [Product!]!
+  getNewArrivalsSeries: [Product!]!
+  getAllProducts: [AllProductGroup!]!
+  getProductDetail(productID: String!, productSeriesEN: String!): ProductDetail
 }

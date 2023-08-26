@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Paper, InputBase, styled, useMediaQuery, Button } from "@mui/material";
 import { Search, Menu } from "@mui/icons-material";
-import { observer } from "mobx-react-lite";
+import { Observer, observer } from "mobx-react-lite";
 import { useStore } from "@/store";
 import { Cart } from "@/modules/product/components/Cart";
 import { useRouter } from "next/router";
@@ -128,81 +128,77 @@ const MotionedMobileMenubar = motion(styled("div")`
 function Header() {
   const router = useRouter();
   const isMobile = useMediaQuery("(max-width:768px)");
-  const { cartVisible, cartContent, setCartVisible } = useStore();
+  const { cartVisible, cartContent, setCartVisible, menubarItems } = useStore();
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   return (
-    <>
-      {!isMobile && (
-        <Prefixbar>
-          <div>
-            <h3 onClick={() => setCartVisible(true)}>
-              {"購物車"}
-              {!!cartContent.length && `(${cartContent.length})`}
-            </h3>
-            <h3>登入/註冊</h3>
-          </div>
-        </Prefixbar>
-      )}
-      <Headerbar>
-        <Logobar>
-          <h1 onClick={() => router.push(`/`)}>Adalia</h1>
-          {!isMobile ? (
-            <Paper>
-              <Search />
-              <InputBase placeholder="Search..." />
-            </Paper>
-          ) : (
-            <Button
-              color="inherit"
-              startIcon={<Menu />}
-              onClick={() => setMobileMenuVisible((prev) => !prev)}
-            />
+    <Observer>
+      {() => (
+        <>
+          {!isMobile && (
+            <Prefixbar>
+              <div>
+                <h3 onClick={() => setCartVisible(true)}>
+                  {"購物車"}
+                  {!!cartContent.length && `(${cartContent.length})`}
+                </h3>
+                <h3>登入/註冊</h3>
+              </div>
+            </Prefixbar>
           )}
-        </Logobar>
-        {!isMobile && (
-          <Menubar>
-            <li>ALL</li>
-            <li>NEW ARRIVALS</li>
-            <li>RANKING</li>
-            <li>TOPS</li>
-            <li>DRESSES</li>
-            <li>KNITWEAR</li>
-            <li>SALE</li>
-          </Menubar>
-        )}
-      </Headerbar>
-      {cartVisible && <Cart cartContent={cartContent} />}
-      {mobileMenuVisible && isMobile && (
-        <AnimatePresence mode="wait">
-          <MotionedMobileMenubar
-            initial={{ opacity: 0, left: "-100%" }}
-            animate={{ opacity: 1, left: "0" }}
-            exit={{ opacity: 0, left: "-100%" }}
-          >
-            <ul>
-              <li>ALL</li>
-              <li>NEW ARRIVALS</li>
-              <li>RANKING</li>
-              <li>TOPS</li>
-              <li>DRESSES</li>
-              <li>KNITWEAR</li>
-              <li>SALE</li>
-            </ul>
-            <ul>
-              <li onClick={() => {
-                setCartVisible(true)
-                setMobileMenuVisible(false)
-              }}>
-                {"購物車"}
-                {!!cartContent.length && `(${cartContent.length})`}
-              </li>
-              <li>登入/註冊</li>
-            </ul>
-          </MotionedMobileMenubar>          
-        </AnimatePresence>
+          <Headerbar>
+            <Logobar>
+              <h1 onClick={() => router.push(`/`)}>Adalia</h1>
+              {!isMobile ? (
+                <Paper>
+                  <Search />
+                  <InputBase placeholder="Search..." />
+                </Paper>
+              ) : (
+                <Button
+                  color="inherit"
+                  startIcon={<Menu />}
+                  onClick={() => setMobileMenuVisible((prev) => !prev)}
+                />
+              )}
+            </Logobar>
+            {!isMobile && (
+              <Menubar>
+                {menubarItems?.map((item, idx) => (
+                  <li key={idx} onClick={() => router.push(`${item.toLowerCase()}`)}>{item}</li>
+                ))}
+              </Menubar>
+            )}
+          </Headerbar>
+          {cartVisible && <Cart cartContent={cartContent} />}
+          {mobileMenuVisible && isMobile && (
+            <AnimatePresence mode="wait">
+              <MotionedMobileMenubar
+                initial={{ opacity: 0, left: "-100%" }}
+                animate={{ opacity: 1, left: "0" }}
+                exit={{ opacity: 0, left: "-100%" }}
+              >
+                <ul>
+                  {menubarItems?.map((item, idx) => (
+                    <li key={idx} onClick={() => router.push(`${item.toLowerCase()}`)}>{item}</li>
+                  ))}
+                </ul>
+                <ul>
+                  <li onClick={() => {
+                    setCartVisible(true)
+                    setMobileMenuVisible(false)
+                  }}>
+                    {"購物車"}
+                    {!!cartContent.length && `(${cartContent.length})`}
+                  </li>
+                  <li>登入/註冊</li>
+                </ul>
+              </MotionedMobileMenubar>          
+            </AnimatePresence>
+          )}
+        </>
       )}
-    </>
+    </Observer>
   );
 }
 

@@ -6,27 +6,28 @@ import { NextPageWithLayout } from "@/pages/_app";
 import { getHomeLayout } from "@/layout/HomeLayout";
 import Head from "next/head";
 import Loading from "@/components/Loading";
-import { useGetProductDetailQuery, useGetProductTipsQuery, Product, ProductTips } from "@/__generated__/types";
+import { useGetProductDetailQuery, ProductDetail } from "@/__generated__/types";
 
 function ProductPage() {
   const router = useRouter();
-  const productID = router.query.item;
-  const { loading: tipsLoaded, data: productTips } = useGetProductTipsQuery();
-  const { loading: dataLoaded, data: product } = useGetProductDetailQuery({
-    variables: { productID: productID as string },
+
+  const { loading, data, error } = useGetProductDetailQuery({
+    variables: { 
+      productID: router.query.product as string,
+      productSeriesEN: router.query.item as string
+    }
   });
 
-  if (tipsLoaded && dataLoaded && !product) return <Loading />;
+  if (loading && !data) return <Loading />;
 
   return (
     <>
       <Head>
         <title key="title">Adalia | Product Detail</title>
       </Head>
-      {product && productTips &&
+      {data &&
         <ProductHome 
-          product={product?.getProductDetail as Product} 
-          productTips={(productTips?.getProductTips as ProductTips)} 
+          productDetail={data?.getProductDetail as ProductDetail} 
         />
       }
     </>

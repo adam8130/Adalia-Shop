@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ProductTips, Product } from "@/__generated__/types";
+import { Product } from "@/__generated__/types";
 import { Button, Grid, Stack, styled, useMediaQuery } from "@mui/material";
 import { useStore } from "@/store";
 import { motion } from "framer-motion";
@@ -102,15 +102,9 @@ const AvailableOptions = styled("div")`
   }
 `;
 
-export function ProductDetail({
-  product,
-  productTips,
-}: {
-  product: Product;
-  productTips: ProductTips;
-}) {
+export function ProductDetail({ product }: { product: Product }) {
   const isMobile = useMediaQuery("(max-width:768px)");
-  const { setCartContent, setCartVisible } = useStore();
+  const { setCartContent, setCartVisible, shopTips } = useStore();
   const [currentProductIdx, setCurrentProductIdx] = useState(0);
   const [currentSizeIdx, setCurrentSizeIdx] = useState(0);
   const [currentColorIdx, setCurrentColorIdx] = useState(0);
@@ -122,7 +116,7 @@ export function ProductDetail({
         <RootGrid container>
           <ImagesGrid item sm={12} md={7} mobile={Number(isMobile)}>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              {product.images.map((item, idx) => (
+              {product.productImages.map((item, idx) => (
                 <Image
                   key={idx}
                   src={item.url}
@@ -135,7 +129,7 @@ export function ProductDetail({
               ))}
             </motion.div>
             <ThumbnailPannel>
-              {product.images.map((item, idx) => (
+              {product.productImages.map((item, idx) => (
                 <Image
                   key={idx}
                   src={item.url}
@@ -150,8 +144,8 @@ export function ProductDetail({
           </ImagesGrid>
           <DetailGrid item sm={12} md={5}>
             <h1>{product.productName}</h1>
-            <h6>{product.productSeries}</h6>
-            {productTips.tips.map((item, idx) => (
+            <h6>{product.productSeriesZH}</h6>
+            {shopTips?.map((item, idx) => (
               <span key={idx}>{item}</span>
             ))}
             <AvailableOptions>
@@ -195,7 +189,7 @@ export function ProductDetail({
                 ))}
               </select>
             </AvailableOptions>
-            <h3>{"售價 NTD "}{currentQuantity * product.price}</h3>
+            <h3>{"售價 NTD "}{currentQuantity * product.productPrice}</h3>
             <Stack direction="row" spacing={2} width="100%" my="20px" pl="20px">
               <Button 
                 variant="outlined" 
@@ -205,11 +199,11 @@ export function ProductDetail({
                   setCartContent((prev) => [...prev,{
                     productID: product.productID,
                     productName: product.productName,
-                    productThumbnail: product.images[0].url,
+                    productThumbnail: product.productImages[0].url,
                     selectedSize: product.availableSize?.[currentSizeIdx].size,
                     selectedColor: product.availableSize?.[currentSizeIdx]?.stock?.[currentColorIdx]?.color,
                     selectedQuantity: currentQuantity,
-                    totalPrice: currentQuantity * product.price,
+                    totalPrice: currentQuantity * product.productPrice,
                     isPreviouslyAdded: false
                   }])
                 }}

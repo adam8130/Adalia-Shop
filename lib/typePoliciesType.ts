@@ -8,14 +8,20 @@ export type ImageKeySpecifier = ("url" | ImageKeySpecifier)[];
 export type ImageFieldPolicy = {
   url?: FieldPolicy<any> | FieldReadFunction<any>;
 };
-export type ProductTipsKeySpecifier = (
-  | "tips"
-  | "campaigns"
-  | ProductTipsKeySpecifier
+export type ShopSettingsKeySpecifier = (
+  | "menubarItems"
+  | "payment"
+  | "delivery"
+  | "shopTips"
+  | "shopCampaigns"
+  | ShopSettingsKeySpecifier
 )[];
-export type ProductTipsFieldPolicy = {
-  tips?: FieldPolicy<any> | FieldReadFunction<any>;
-  campaigns?: FieldPolicy<any> | FieldReadFunction<any>;
+export type ShopSettingsFieldPolicy = {
+  menubarItems?: FieldPolicy<any> | FieldReadFunction<any>;
+  payment?: FieldPolicy<any> | FieldReadFunction<any>;
+  delivery?: FieldPolicy<any> | FieldReadFunction<any>;
+  shopTips?: FieldPolicy<any> | FieldReadFunction<any>;
+  shopCampaigns?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type AvailableColorKeySpecifier = (
   | "color"
@@ -40,10 +46,12 @@ export type AvailableSizeFieldPolicy = {
 export type ProductKeySpecifier = (
   | "productName"
   | "productID"
-  | "productSeries"
-  | "images"
-  | "price"
-  | "description"
+  | "productSeriesEN"
+  | "productSeriesZH"
+  | "productImages"
+  | "productPrice"
+  | "productDescription"
+  | "availableCampaigns"
   | "availableSize"
   | "availableColor"
   | ProductKeySpecifier
@@ -51,12 +59,23 @@ export type ProductKeySpecifier = (
 export type ProductFieldPolicy = {
   productName?: FieldPolicy<any> | FieldReadFunction<any>;
   productID?: FieldPolicy<any> | FieldReadFunction<any>;
-  productSeries?: FieldPolicy<any> | FieldReadFunction<any>;
-  images?: FieldPolicy<any> | FieldReadFunction<any>;
-  price?: FieldPolicy<any> | FieldReadFunction<any>;
-  description?: FieldPolicy<any> | FieldReadFunction<any>;
+  productSeriesEN?: FieldPolicy<any> | FieldReadFunction<any>;
+  productSeriesZH?: FieldPolicy<any> | FieldReadFunction<any>;
+  productImages?: FieldPolicy<any> | FieldReadFunction<any>;
+  productPrice?: FieldPolicy<any> | FieldReadFunction<any>;
+  productDescription?: FieldPolicy<any> | FieldReadFunction<any>;
+  availableCampaigns?: FieldPolicy<any> | FieldReadFunction<any>;
   availableSize?: FieldPolicy<any> | FieldReadFunction<any>;
   availableColor?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type AllProductGroupKeySpecifier = (
+  | "series"
+  | "products"
+  | AllProductGroupKeySpecifier
+)[];
+export type AllProductGroupFieldPolicy = {
+  series?: FieldPolicy<any> | FieldReadFunction<any>;
+  products?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type CartContentKeySpecifier = (
   | "productID"
@@ -79,16 +98,44 @@ export type CartContentFieldPolicy = {
   totalPrice?: FieldPolicy<any> | FieldReadFunction<any>;
   isPreviouslyAdded?: FieldPolicy<any> | FieldReadFunction<any>;
 };
+export type RelatedProductsKeySpecifier = (
+  | "productID"
+  | "productName"
+  | "productImages"
+  | "productPrice"
+  | RelatedProductsKeySpecifier
+)[];
+export type RelatedProductsFieldPolicy = {
+  productID?: FieldPolicy<any> | FieldReadFunction<any>;
+  productName?: FieldPolicy<any> | FieldReadFunction<any>;
+  productImages?: FieldPolicy<any> | FieldReadFunction<any>;
+  productPrice?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type ProductDetailKeySpecifier = (
+  | "product"
+  | "relatedProducts"
+  | ProductDetailKeySpecifier
+)[];
+export type ProductDetailFieldPolicy = {
+  product?: FieldPolicy<any> | FieldReadFunction<any>;
+  relatedProducts?: FieldPolicy<any> | FieldReadFunction<any>;
+};
 export type QueryKeySpecifier = (
-  | "getProductDetail"
+  | "getShopSettings"
+  | "getSpringSeries"
+  | "getAutumnSeries"
+  | "getNewArrivalsSeries"
   | "getAllProducts"
-  | "getProductTips"
+  | "getProductDetail"
   | QueryKeySpecifier
 )[];
 export type QueryFieldPolicy = {
-  getProductDetail?: FieldPolicy<any> | FieldReadFunction<any>;
+  getShopSettings?: FieldPolicy<any> | FieldReadFunction<any>;
+  getSpringSeries?: FieldPolicy<any> | FieldReadFunction<any>;
+  getAutumnSeries?: FieldPolicy<any> | FieldReadFunction<any>;
+  getNewArrivalsSeries?: FieldPolicy<any> | FieldReadFunction<any>;
   getAllProducts?: FieldPolicy<any> | FieldReadFunction<any>;
-  getProductTips?: FieldPolicy<any> | FieldReadFunction<any>;
+  getProductDetail?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type StrictTypedTypePolicies = {
   Image?: Omit<TypePolicy, "fields" | "keyFields"> & {
@@ -98,12 +145,12 @@ export type StrictTypedTypePolicies = {
       | (() => undefined | ImageKeySpecifier);
     fields?: ImageFieldPolicy;
   };
-  ProductTips?: Omit<TypePolicy, "fields" | "keyFields"> & {
+  ShopSettings?: Omit<TypePolicy, "fields" | "keyFields"> & {
     keyFields?:
       | false
-      | ProductTipsKeySpecifier
-      | (() => undefined | ProductTipsKeySpecifier);
-    fields?: ProductTipsFieldPolicy;
+      | ShopSettingsKeySpecifier
+      | (() => undefined | ShopSettingsKeySpecifier);
+    fields?: ShopSettingsFieldPolicy;
   };
   AvailableColor?: Omit<TypePolicy, "fields" | "keyFields"> & {
     keyFields?:
@@ -126,12 +173,33 @@ export type StrictTypedTypePolicies = {
       | (() => undefined | ProductKeySpecifier);
     fields?: ProductFieldPolicy;
   };
+  AllProductGroup?: Omit<TypePolicy, "fields" | "keyFields"> & {
+    keyFields?:
+      | false
+      | AllProductGroupKeySpecifier
+      | (() => undefined | AllProductGroupKeySpecifier);
+    fields?: AllProductGroupFieldPolicy;
+  };
   CartContent?: Omit<TypePolicy, "fields" | "keyFields"> & {
     keyFields?:
       | false
       | CartContentKeySpecifier
       | (() => undefined | CartContentKeySpecifier);
     fields?: CartContentFieldPolicy;
+  };
+  RelatedProducts?: Omit<TypePolicy, "fields" | "keyFields"> & {
+    keyFields?:
+      | false
+      | RelatedProductsKeySpecifier
+      | (() => undefined | RelatedProductsKeySpecifier);
+    fields?: RelatedProductsFieldPolicy;
+  };
+  ProductDetail?: Omit<TypePolicy, "fields" | "keyFields"> & {
+    keyFields?:
+      | false
+      | ProductDetailKeySpecifier
+      | (() => undefined | ProductDetailKeySpecifier);
+    fields?: ProductDetailFieldPolicy;
   };
   Query?: Omit<TypePolicy, "fields" | "keyFields"> & {
     keyFields?:
