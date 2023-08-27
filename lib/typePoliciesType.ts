@@ -105,6 +105,8 @@ export type CartContentFieldPolicy = {
 export type RelatedProductsKeySpecifier = (
   | "productID"
   | "productName"
+  | "productSeriesEN"
+  | "productSeriesZH"
   | "productImages"
   | "productPrice"
   | RelatedProductsKeySpecifier
@@ -112,6 +114,8 @@ export type RelatedProductsKeySpecifier = (
 export type RelatedProductsFieldPolicy = {
   productID?: FieldPolicy<any> | FieldReadFunction<any>;
   productName?: FieldPolicy<any> | FieldReadFunction<any>;
+  productSeriesEN?: FieldPolicy<any> | FieldReadFunction<any>;
+  productSeriesZH?: FieldPolicy<any> | FieldReadFunction<any>;
   productImages?: FieldPolicy<any> | FieldReadFunction<any>;
   productPrice?: FieldPolicy<any> | FieldReadFunction<any>;
 };

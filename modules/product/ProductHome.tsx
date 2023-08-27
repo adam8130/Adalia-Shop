@@ -1,8 +1,6 @@
 import { ProductDetail as ProductDetailType, RelatedProducts } from "@/__generated__/types";
 import { observer } from "mobx-react-lite";
-import { useStore } from "@/store";
 import { ProductDetail } from "./components/ProductDetail";
-import { Cart } from "./components/Cart";
 import { ProductDescription } from "./components/ProductDescription";
 
 

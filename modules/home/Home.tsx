@@ -1,5 +1,5 @@
-import BannerWall from "@/components/BannerWall";
-import ProductWall from "@/components/ProductWall";
+import BannerWall from "@/modules/home/components/BannerWall";
+import ProductWall from "@/modules/home/components/ProductWall";
 import DiscountCard from "@/components/DiscountCard";
 import FieldCard from "@/components/FieldCard";
 import { AllProductGroup } from "@/__generated__/types";
@@ -16,7 +16,7 @@ export default function Home({ allProducts }: { allProducts: AllProductGroup[] }
           brand, embodying their own style and ideals.
         </p>
       </FieldCard>
-      <ProductWall displayAmount={6} productList={allProducts} />
+      <ProductWall productList={allProducts} />
       <FieldCard title="Vintage Love, Modern Spirit">
         <p>
           The streets of New York City, 2015, saw the union of creative minds

@@ -27,7 +27,7 @@ const resolvers = {
     getProductDetail: (_, { productID, productSeriesEN }) => {
       const targetSeries = allProductsDB.find((item) => item.series === productSeriesEN.toUpperCase());
       const product = targetSeries.db.find((item) => item.productID === productID);
-      const relatedProducts = getRandomItems(targetSeries.db, 4);
+      const relatedProducts = getRandomItems(targetSeries.db, 4, product);
       return { product, relatedProducts }
     }
   }

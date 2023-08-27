@@ -55,6 +55,8 @@ type CartContent {
 type RelatedProducts {
   productID: String
   productName: String
+  productSeriesEN: String
+  productSeriesZH: String
   productImages: [Image]
   productPrice: Int
 }

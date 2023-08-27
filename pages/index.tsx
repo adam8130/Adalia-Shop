@@ -12,7 +12,7 @@ function App() {
   const { loading, data, error } = useGetAllProductsQuery()
 
   if (loading && !data) return <Loading />;
-  console.log(error)
+
   return (
     <>
       <Head>

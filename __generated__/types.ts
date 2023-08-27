@@ -95,6 +95,8 @@ export type RelatedProducts = {
   __typename?: "RelatedProducts";
   productID?: Maybe<Scalars["String"]["output"]>;
   productName?: Maybe<Scalars["String"]["output"]>;
+  productSeriesEN?: Maybe<Scalars["String"]["output"]>;
+  productSeriesZH?: Maybe<Scalars["String"]["output"]>;
   productImages?: Maybe<Array<Maybe<Image>>>;
   productPrice?: Maybe<Scalars["Int"]["output"]>;
 };
@@ -153,6 +155,8 @@ export type GetProductDetailQuery = {
       __typename?: "RelatedProducts";
       productID?: string | null;
       productName?: string | null;
+      productSeriesEN?: string | null;
+      productSeriesZH?: string | null;
       productPrice?: number | null;
       productImages?: Array<{
         __typename?: "Image";
@@ -231,6 +235,8 @@ export const GetProductDetailDocument = gql`
       relatedProducts {
         productID
         productName
+        productSeriesEN
+        productSeriesZH
         productImages {
           url
         }

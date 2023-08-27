@@ -240,6 +240,14 @@ export const aRelatedProducts = (
       overrides && overrides.hasOwnProperty("productName")
         ? overrides.productName!
         : "enim",
+    productSeriesEN:
+      overrides && overrides.hasOwnProperty("productSeriesEN")
+        ? overrides.productSeriesEN!
+        : "sed",
+    productSeriesZH:
+      overrides && overrides.hasOwnProperty("productSeriesZH")
+        ? overrides.productSeriesZH!
+        : "ea",
     productImages:
       overrides && overrides.hasOwnProperty("productImages")
         ? overrides.productImages!

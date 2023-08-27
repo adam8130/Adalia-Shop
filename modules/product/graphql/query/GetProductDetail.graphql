@@ -22,6 +22,8 @@ query GetProductDetail($productID: String!, $productSeriesEN: String!) {
     relatedProducts {
       productID
       productName
+      productSeriesEN
+      productSeriesZH
       productImages {
         url
       }
