@@ -7,7 +7,7 @@ import { ProductDescription } from "./components/ProductDescription";
 
 
 function ProductHome({ productDetail }: { productDetail: ProductDetailType }) {
-  console.log(productDetail)
+
   return (
     <>
       <ProductDetail product={productDetail.product!} />

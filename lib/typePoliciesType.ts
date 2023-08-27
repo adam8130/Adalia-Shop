@@ -80,6 +80,8 @@ export type AllProductGroupFieldPolicy = {
 export type CartContentKeySpecifier = (
   | "productID"
   | "productName"
+  | "productSeriesEN"
+  | "productSeriesZH"
   | "productThumbnail"
   | "selectedSize"
   | "selectedColor"
@@ -91,6 +93,8 @@ export type CartContentKeySpecifier = (
 export type CartContentFieldPolicy = {
   productID?: FieldPolicy<any> | FieldReadFunction<any>;
   productName?: FieldPolicy<any> | FieldReadFunction<any>;
+  productSeriesEN?: FieldPolicy<any> | FieldReadFunction<any>;
+  productSeriesZH?: FieldPolicy<any> | FieldReadFunction<any>;
   productThumbnail?: FieldPolicy<any> | FieldReadFunction<any>;
   selectedSize?: FieldPolicy<any> | FieldReadFunction<any>;
   selectedColor?: FieldPolicy<any> | FieldReadFunction<any>;

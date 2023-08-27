@@ -42,6 +42,8 @@ type AllProductGroup {
 type CartContent {
   productID: String
   productName: String
+  productSeriesEN: String
+  productSeriesZH: String
   productThumbnail: String
   selectedSize: String
   selectedColor: String

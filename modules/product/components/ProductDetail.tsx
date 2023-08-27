@@ -199,6 +199,8 @@ export function ProductDetail({ product }: { product: Product }) {
                   setCartContent((prev) => [...prev,{
                     productID: product.productID,
                     productName: product.productName,
+                    productSeriesEN: product.productSeriesEN,
+                    productSeriesZH: product.productSeriesZH,
                     productThumbnail: product.productImages[0].url,
                     selectedSize: product.availableSize?.[currentSizeIdx].size,
                     selectedColor: product.availableSize?.[currentSizeIdx]?.stock?.[currentColorIdx]?.color,

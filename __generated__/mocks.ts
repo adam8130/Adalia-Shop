@@ -190,6 +190,14 @@ export const aCartContent = (
       overrides && overrides.hasOwnProperty("productName")
         ? overrides.productName!
         : "inventore",
+    productSeriesEN:
+      overrides && overrides.hasOwnProperty("productSeriesEN")
+        ? overrides.productSeriesEN!
+        : "similique",
+    productSeriesZH:
+      overrides && overrides.hasOwnProperty("productSeriesZH")
+        ? overrides.productSeriesZH!
+        : "et",
     productThumbnail:
       overrides && overrides.hasOwnProperty("productThumbnail")
         ? overrides.productThumbnail!

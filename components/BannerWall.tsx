@@ -2,7 +2,7 @@ import { Button, Stack, styled, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 const Root = styled("div")(
-  ({ mobile }: {mobile: Number}) => `
+  ({ mobile }: {mobile: number}) => `
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@ const Root = styled("div")(
 `,
 );
 const MainSection = styled("div")(
-  ({ mobile }: {mobile: Number}) => `
+  ({ mobile }: {mobile: number}) => `
     width: 100%;
     position: relative;
     img {
@@ -46,7 +46,7 @@ const MainSection = styled("div")(
 `,
 );
 const SubSection = styled(Stack)(
-  ({ mobile }: { mobile: Number }) => `
+  ({ mobile }: { mobile: number }) => `
     width: 100%;
     display: flex;
     flex-direction: ${mobile ? "column" : "row"};
@@ -55,9 +55,9 @@ const SubSection = styled(Stack)(
 `,
 );
 const SubItem = styled("div")(
-  ({ mobile }: { mobile: Number }) => `
+  ({ mobile }: { mobile: number }) => `
     flex: 1;
-    height: 320px;
+    height: ${mobile ? "200px" : "300px"};
     overflow: hidden;
     position: relative;
     img {
