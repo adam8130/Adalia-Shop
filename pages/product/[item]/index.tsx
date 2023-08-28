@@ -1,6 +1,6 @@
 import React from "react";
 import ProductHome from "@/modules/product/ProductHome";
-import { useRouter, withRouter } from "next/router";
+import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { NextPageWithLayout } from "@/pages/_app";
 import { getHomeLayout } from "@/layout/HomeLayout";
@@ -42,6 +42,5 @@ function ProductPage() {
 //   };
 // };
 
-const Page = withRouter(ProductPage);
-(Page as unknown as NextPageWithLayout).getLayout = getHomeLayout;
-export default Page;
+(ProductPage as unknown as NextPageWithLayout).getLayout = getHomeLayout;
+export default ProductPage;

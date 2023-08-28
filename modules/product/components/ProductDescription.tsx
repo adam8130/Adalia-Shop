@@ -41,6 +41,8 @@ const RootGrid = styled(Grid)(
 );
 const RelatedProductGrid = styled(Grid)(
   ({ mobile }: { mobile: number }) => `
+    margin-top: 40px !important;
+    margin-bottom: 40px;
     .MuiGrid-item {
       div {
         width: ${mobile ? '120px' : '180px'};
@@ -73,7 +75,7 @@ export function ProductDescription({
   relatedProducts: RelatedProducts[];
 }) {
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width:768px)");
+  const isMobile = useMediaQuery('(max-width:768px)');
   const { payment, delivery } = useStore();
   const { setRefsCallback } = useHoverImages();
 
@@ -109,15 +111,10 @@ export function ProductDescription({
             item 
             xs={6}
             md={3}
-            onClick={() => {
-              router.push({
-                pathname: `/product/[series]`,
-                query: {
-                  series: item?.productSeriesEN?.toLocaleLowerCase().replace(' ', ''),
-                  product: item?.productID,
-                }
-              })
-            }}
+            onClick={() => router.push({ 
+              pathname: `/product/${item?.productSeriesEN?.toLocaleLowerCase().replace(' ', '')}`, 
+              query: { product: item.productID } 
+            })}
           >
             <div ref={setRefsCallback}>
               <Image 

@@ -14,7 +14,7 @@ export const useHoverImages = () => {
 
   useEffect(() => {
     if (!refsArray[0]) return;
-    console.log(refsArray)
+
     const handleMouseEnter = (ref: HTMLDivElement) => {
       (ref.children[0] as HTMLElement).style.zIndex = "0";
       (ref.children[0] as HTMLElement).style.opacity = "0";

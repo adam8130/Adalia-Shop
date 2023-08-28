@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import NextHead from "next/head";
 import type { AppProps } from "next/app";
-import { withRouter } from "next/router";
 import { getHomeLayout } from "@/layout/HomeLayout";
 import { ApolloProvider } from "@apollo/client";
 import client from "@/lib/initApollo";
@@ -43,6 +42,6 @@ export function AdaliaShop(props: AppPropsWithLayout): JSX.Element {
   );
 }
 
-const Page = withRouter(AdaliaShop);
-(Page as NextPageWithLayout).getLayout = getHomeLayout;
-export default Page;
+
+(AdaliaShop as NextPageWithLayout).getLayout = getHomeLayout;
+export default AdaliaShop;  

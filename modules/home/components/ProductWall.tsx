@@ -54,12 +54,9 @@ function ProductWall({ productList }: { productList: AllProductGroup[] }): JSX.E
             columnSpacing={2}
           >
             <ProductWrapper
-              onClick={() => router.push({
-                pathname: `/product/[series]`,
-                query: {
-                  series: item.productSeriesEN.toLocaleLowerCase().replace(' ', ''),
-                  product: item.productID,
-                },
+              onClick={() => router.push({ 
+                pathname: `/product/${item.productSeriesEN.toLocaleLowerCase().replace(' ', '')}`, 
+                query: { product: item.productID } 
               })}
             >
               <div ref={setRefsCallback}>

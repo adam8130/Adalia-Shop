@@ -1,5 +1,4 @@
 import { ProductDetail as ProductDetailType, RelatedProducts } from "@/__generated__/types";
-import { observer } from "mobx-react-lite";
 import { ProductDetail } from "./components/ProductDetail";
 import { ProductDescription } from "./components/ProductDescription";
 
@@ -17,4 +16,4 @@ function ProductHome({ productDetail }: { productDetail: ProductDetailType }) {
   )
 }
 
-export default observer(ProductHome);
+export default ProductHome;
