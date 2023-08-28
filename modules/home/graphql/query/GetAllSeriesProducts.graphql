@@ -6,18 +6,10 @@ query GetAllSeriesProducts($quantity: Int!) {
       productID
       productSeriesEN
       productSeriesZH
-      productDescription
       productPrice
+      availableCampaigns
       productImages {
         url
-      }
-      availableSize {
-        size
-        stock {
-          color
-          backgroundColor
-          stock
-        }
       }
     }
   }

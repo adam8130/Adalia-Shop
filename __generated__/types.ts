@@ -126,6 +126,22 @@ export type QueryGetProductDetailArgs = {
   productSeriesEN: Scalars["String"]["input"];
 };
 
+export type GetAutumnSeriesQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetAutumnSeriesQuery = {
+  __typename?: "Query";
+  getAutumnSeries: Array<{
+    __typename?: "Product";
+    productName: string;
+    productID: string;
+    productSeriesEN: string;
+    productSeriesZH: string;
+    productPrice: number;
+    availableCampaigns?: number | null;
+    productImages: Array<{ __typename?: "Image"; url: string }>;
+  }>;
+};
+
 export type GetAllSeriesProductsQueryVariables = Exact<{
   quantity: Scalars["Int"]["input"];
 }>;
@@ -141,19 +157,9 @@ export type GetAllSeriesProductsQuery = {
       productID: string;
       productSeriesEN: string;
       productSeriesZH: string;
-      productDescription?: string | null;
       productPrice: number;
+      availableCampaigns?: number | null;
       productImages: Array<{ __typename?: "Image"; url: string }>;
-      availableSize?: Array<{
-        __typename?: "AvailableSize";
-        size?: string | null;
-        stock?: Array<{
-          __typename?: "AvailableColor";
-          color?: string | null;
-          backgroundColor?: string | null;
-          stock?: number | null;
-        } | null> | null;
-      }> | null;
     }>;
   }>;
 };
@@ -202,6 +208,40 @@ export type GetProductDetailQuery = {
   } | null;
 };
 
+export type GetSpringSeriesQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetSpringSeriesQuery = {
+  __typename?: "Query";
+  getSpringSeries: Array<{
+    __typename?: "Product";
+    productName: string;
+    productID: string;
+    productSeriesEN: string;
+    productSeriesZH: string;
+    productPrice: number;
+    availableCampaigns?: number | null;
+    productImages: Array<{ __typename?: "Image"; url: string }>;
+  }>;
+};
+
+export type GetNewArrivalsSeriesQueryVariables = Exact<{
+  [key: string]: never;
+}>;
+
+export type GetNewArrivalsSeriesQuery = {
+  __typename?: "Query";
+  getNewArrivalsSeries: Array<{
+    __typename?: "Product";
+    productName: string;
+    productID: string;
+    productSeriesEN: string;
+    productSeriesZH: string;
+    productPrice: number;
+    availableCampaigns?: number | null;
+    productImages: Array<{ __typename?: "Image"; url: string }>;
+  }>;
+};
+
 export type GetShopSettingsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetShopSettingsQuery = {
@@ -216,6 +256,71 @@ export type GetShopSettingsQuery = {
   } | null;
 };
 
+export const GetAutumnSeriesDocument = gql`
+  query GetAutumnSeries {
+    getAutumnSeries {
+      productName
+      productID
+      productSeriesEN
+      productSeriesZH
+      productPrice
+      availableCampaigns
+      productImages {
+        url
+      }
+    }
+  }
+`;
+
+/**
+ * __useGetAutumnSeriesQuery__
+ *
+ * To run a query within a React component, call `useGetAutumnSeriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetAutumnSeriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetAutumnSeriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetAutumnSeriesQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    GetAutumnSeriesQuery,
+    GetAutumnSeriesQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<GetAutumnSeriesQuery, GetAutumnSeriesQueryVariables>(
+    GetAutumnSeriesDocument,
+    options,
+  );
+}
+export function useGetAutumnSeriesLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    GetAutumnSeriesQuery,
+    GetAutumnSeriesQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<
+    GetAutumnSeriesQuery,
+    GetAutumnSeriesQueryVariables
+  >(GetAutumnSeriesDocument, options);
+}
+export type GetAutumnSeriesQueryHookResult = ReturnType<
+  typeof useGetAutumnSeriesQuery
+>;
+export type GetAutumnSeriesLazyQueryHookResult = ReturnType<
+  typeof useGetAutumnSeriesLazyQuery
+>;
+export type GetAutumnSeriesQueryResult = Apollo.QueryResult<
+  GetAutumnSeriesQuery,
+  GetAutumnSeriesQueryVariables
+>;
 export const GetAllSeriesProductsDocument = gql`
   query GetAllSeriesProducts($quantity: Int!) {
     getAllSeriesProducts(quantity: $quantity) {
@@ -225,18 +330,10 @@ export const GetAllSeriesProductsDocument = gql`
         productID
         productSeriesEN
         productSeriesZH
-        productDescription
         productPrice
+        availableCampaigns
         productImages {
           url
-        }
-        availableSize {
-          size
-          stock {
-            color
-            backgroundColor
-            stock
-          }
         }
       }
     }
@@ -379,6 +476,136 @@ export type GetProductDetailLazyQueryHookResult = ReturnType<
 export type GetProductDetailQueryResult = Apollo.QueryResult<
   GetProductDetailQuery,
   GetProductDetailQueryVariables
+>;
+export const GetSpringSeriesDocument = gql`
+  query GetSpringSeries {
+    getSpringSeries {
+      productName
+      productID
+      productSeriesEN
+      productSeriesZH
+      productPrice
+      availableCampaigns
+      productImages {
+        url
+      }
+    }
+  }
+`;
+
+/**
+ * __useGetSpringSeriesQuery__
+ *
+ * To run a query within a React component, call `useGetSpringSeriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetSpringSeriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetSpringSeriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetSpringSeriesQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    GetSpringSeriesQuery,
+    GetSpringSeriesQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<GetSpringSeriesQuery, GetSpringSeriesQueryVariables>(
+    GetSpringSeriesDocument,
+    options,
+  );
+}
+export function useGetSpringSeriesLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    GetSpringSeriesQuery,
+    GetSpringSeriesQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<
+    GetSpringSeriesQuery,
+    GetSpringSeriesQueryVariables
+  >(GetSpringSeriesDocument, options);
+}
+export type GetSpringSeriesQueryHookResult = ReturnType<
+  typeof useGetSpringSeriesQuery
+>;
+export type GetSpringSeriesLazyQueryHookResult = ReturnType<
+  typeof useGetSpringSeriesLazyQuery
+>;
+export type GetSpringSeriesQueryResult = Apollo.QueryResult<
+  GetSpringSeriesQuery,
+  GetSpringSeriesQueryVariables
+>;
+export const GetNewArrivalsSeriesDocument = gql`
+  query GetNewArrivalsSeries {
+    getNewArrivalsSeries {
+      productName
+      productID
+      productSeriesEN
+      productSeriesZH
+      productPrice
+      availableCampaigns
+      productImages {
+        url
+      }
+    }
+  }
+`;
+
+/**
+ * __useGetNewArrivalsSeriesQuery__
+ *
+ * To run a query within a React component, call `useGetNewArrivalsSeriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetNewArrivalsSeriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetNewArrivalsSeriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetNewArrivalsSeriesQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    GetNewArrivalsSeriesQuery,
+    GetNewArrivalsSeriesQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<
+    GetNewArrivalsSeriesQuery,
+    GetNewArrivalsSeriesQueryVariables
+  >(GetNewArrivalsSeriesDocument, options);
+}
+export function useGetNewArrivalsSeriesLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    GetNewArrivalsSeriesQuery,
+    GetNewArrivalsSeriesQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<
+    GetNewArrivalsSeriesQuery,
+    GetNewArrivalsSeriesQueryVariables
+  >(GetNewArrivalsSeriesDocument, options);
+}
+export type GetNewArrivalsSeriesQueryHookResult = ReturnType<
+  typeof useGetNewArrivalsSeriesQuery
+>;
+export type GetNewArrivalsSeriesLazyQueryHookResult = ReturnType<
+  typeof useGetNewArrivalsSeriesLazyQuery
+>;
+export type GetNewArrivalsSeriesQueryResult = Apollo.QueryResult<
+  GetNewArrivalsSeriesQuery,
+  GetNewArrivalsSeriesQueryVariables
 >;
 export const GetShopSettingsDocument = gql`
   query GetShopSettings {

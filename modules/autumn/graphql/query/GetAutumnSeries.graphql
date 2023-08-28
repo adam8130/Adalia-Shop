@@ -1,0 +1,13 @@
+query GetAutumnSeries {
+  getAutumnSeries {
+    productName
+    productID
+    productSeriesEN
+    productSeriesZH
+    productPrice
+    availableCampaigns
+    productImages {
+      url
+    }
+  }
+}

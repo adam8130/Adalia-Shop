@@ -1,0 +1,13 @@
+query GetSpringSeries {
+  getSpringSeries {
+    productName
+    productID
+    productSeriesEN
+    productSeriesZH
+    productPrice
+    availableCampaigns
+    productImages {
+      url
+    }
+  }
+}

@@ -1,0 +1,13 @@
+query GetNewArrivalsSeries {
+  getNewArrivalsSeries {
+    productName
+    productID
+    productSeriesEN
+    productSeriesZH
+    productPrice
+    availableCampaigns
+    productImages {
+      url
+    }
+  }
+}

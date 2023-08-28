@@ -47,7 +47,7 @@ const ContainerGrid = styled(Grid)(
   `
 );
 
-export default function NewArrivalsHome({ products }: { products: Product[] }) {
+export default function SpringHome({ products }: { products: Product[] }) {
   const { setRefsCallback } = useHoverImages();
   const isMobile = useMediaQuery('(max-width:768px)');
   const router = useRouter();
@@ -59,7 +59,7 @@ export default function NewArrivalsHome({ products }: { products: Product[] }) {
         mobile={Number(isMobile)}
       >
         <Grid item xs={12}>
-          <h1>New Arrivals</h1>
+          <h1>Spring</h1>
           <span>Series</span>
         </Grid>
         {products.map((product, idx) => (
