@@ -14,7 +14,8 @@ const ContainerGrid = styled(Grid)(
       gap: 10px;
       align-items: end;
       letter-spacing: 2px;
-      margin: 10px 0;
+      margin-top: 10px;
+      margin-bottom: 40px;
       h1 {
         font-size: 32px;
         line-height: 32px;
@@ -45,7 +46,7 @@ const ContainerGrid = styled(Grid)(
       }
     }
     > .MuiGrid-item:last-child {
-      margin: 20px 20px 10px auto;
+      margin: 20px 20px 0 auto;
       font-weight: 300;
     }
   `

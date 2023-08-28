@@ -44,7 +44,7 @@ function ProductWall({ productList }: { productList: AllProductGroup[] }): JSX.E
   return (
     <Root>
       <Grid container rowSpacing={5}>
-        {productList.map((item) => item.products.map((item) => (
+        {productList.slice(0, 2).map((item) => item.products.map((item) => (
           <Grid
             item
             key={item.productID}

@@ -18,9 +18,9 @@ const resolvers = {
     getNewArrivalsSeries: () => newArrivalsDB,
     getAllSeriesProducts: (_, { quantity }) => {
       const products = [
+        { series: "NEW ARRIVALS", products :getRandomItems(newArrivalsDB, quantity) },
         { series: "SPRING", products: getRandomItems(springDB, quantity) },
-        { series: "AUTUMN", products: getRandomItems(autumnDB, quantity) },
-        { series: "NEW ARRIVALS", products :getRandomItems(newArrivalsDB, quantity) }
+        { series: "AUTUMN", products: getRandomItems(autumnDB, quantity) }
       ];
       return products;
     },

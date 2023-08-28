@@ -1,4 +1,4 @@
-import { Button, Stack, styled, useMediaQuery } from "@mui/material";
+import { Button, styled, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 const Root = styled("div")(
@@ -8,15 +8,14 @@ const Root = styled("div")(
     flex-direction: column;
     padding: ${mobile ? '20px 10px' : '20px 40px'};
     gap: 10px;
-`,
+  `
 );
 const MainSection = styled("div")(
   ({ mobile }: {mobile: number}) => `
     width: 100%;
     position: relative;
+    height: ${mobile ? "250px" : "550px"};
     img {
-        width: 100%;
-        height: ${mobile ? "300px" : "550px"};
         object-fit: cover;
         object-position: center -40px;
     }
@@ -26,9 +25,9 @@ const MainSection = styled("div")(
         top: 35%;
         left: 8%;
         .title {
-            font-size: 50px;
+            font-size: ${mobile ? '32px' : '50px'};
         }
-        .content {
+        .subtitle {
             font-size: 20px;
             font-weight: 300;
         }
@@ -43,26 +42,23 @@ const MainSection = styled("div")(
             color: rgba(0, 0, 0, 0.8);
         }
     }
-`,
+  `
 );
-const SubSection = styled(Stack)(
+const SubSection = styled("div")(
   ({ mobile }: { mobile: number }) => `
     width: 100%;
     display: flex;
     flex-direction: ${mobile ? "column" : "row"};
-    overflow: hidden;
     gap: 10px;
-`,
+  `
 );
 const SubItem = styled("div")(
   ({ mobile }: { mobile: number }) => `
-    flex: 1;
+    width: ${mobile ? "100%" : "50%"};
     height: ${mobile ? "200px" : "300px"};
     overflow: hidden;
     position: relative;
     img {
-        width: 100%;
-        height: ${mobile ? "200px" : "300px"};
         object-fit: cover;
         object-position: center center;
         transition: all 0.2s;
@@ -70,12 +66,12 @@ const SubItem = styled("div")(
     .hover-box{
         width: 100%;
         height: 100%;
-        display: none;
+        display: ${mobile ? 'inline-flex' : 'none'};
         justify-content: center;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        background: rgba(255, 255, 255, 0.55);
+        background: ${mobile ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 255, 255, 0.55)'};
         top: 0;
         left: 0;
         pointer-events: none;
@@ -93,7 +89,7 @@ const SubItem = styled("div")(
             display: inline-flex;
         }
     }
-`,
+  `
 );
 
 function BannerWall() {
@@ -104,14 +100,14 @@ function BannerWall() {
       <MainSection mobile={Number(isMobile)}>
         <Image
           src="/images/Banner01.png"
-          width={600}
-          height={550}
-          priority
           alt="春夏新品上市"
+          sizes="(max-width: 768px) 100vw"
+          priority
+          fill
         />
         <div>
           <div className="title">Heirloom Classics</div>
-          <div className="content">春夏新品上市</div>
+          <div className="subtitle">春夏新品上市</div>
           <Button variant="outlined">SHOP NOW</Button>
         </div>
       </MainSection>
@@ -119,10 +115,10 @@ function BannerWall() {
         <SubItem mobile={Number(isMobile)}>
           <Image
             src="/images/Banner02.png"
-            width={600}
-            height={300}
-            priority
             alt="春夏新品上市"
+            priority
+            sizes="(max-width: 768px) 100vw"
+            fill
           />
           <div className="hover-box">
             <div className="title">NEW ARRIVAL</div>
@@ -132,10 +128,10 @@ function BannerWall() {
         <SubItem mobile={Number(isMobile)}>
           <Image
             src="/images/Banner03.png"
-            width={600}
-            height={300}
-            priority
             alt="春夏新品上市"
+            priority
+            sizes="(max-width: 768px) 100vw"
+            fill
           />
           <div className="hover-box">
             <div className="title">SPRING LOOKBOOK</div>

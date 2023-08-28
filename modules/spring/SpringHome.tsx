@@ -59,7 +59,7 @@ export default function SpringHome({ products }: { products: Product[] }) {
         mobile={Number(isMobile)}
       >
         <Grid item xs={12}>
-          <h1>Spring</h1>
+          <h1>{products[0].productSeriesEN}</h1>
           <span>Series</span>
         </Grid>
         {products.map((product, idx) => (

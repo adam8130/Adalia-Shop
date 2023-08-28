@@ -4,6 +4,7 @@ const nextConfig = {
     images: {
         domains: [
             'images.unsplash.com',
+            'cdn.pixabay.com',
             'shop.adalia.pp.ua'
         ],
     },

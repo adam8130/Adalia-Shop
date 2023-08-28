@@ -1,9 +1,10 @@
 import { styled, Grid, useMediaQuery } from "@mui/material";
 import { RelatedProducts } from "@/__generated__/types";
 import { useStore } from "@/store";
-import Image from "next/image";
 import { useHoverImages } from "@/hooks/useHoverImages";
 import { useRouter } from "next/router";
+import { breakLinedText } from '@/utils/formatText'
+import Image from "next/image";
 
 const RootGrid = styled(Grid)(
   ({ mobile }: { mobile: number }) => `
@@ -84,7 +85,7 @@ export function ProductDescription({
       <Grid container>
         <Grid item xs={12} md={8}>
           <h1>商品描述</h1>
-          <p>{description}</p>
+          <p>{breakLinedText(description)}</p>
         </Grid>
         <Grid item xs={12} md={4}>
           <h1>付款方式</h1>

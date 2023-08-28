@@ -1,19 +1,19 @@
 [
   {
-      "productName": "Retainicer",
+      "productName": "Oceanyrie",
       "productSeriesEN": "NEW ARRIVALS",
-      "productSeriesZH": "最新到貨系列",
+      "productSeriesZH": "最新上市",
       "productID": "201",
       "productImages": [
           {
-              "url": "https://images.unsplash.com/photo-1523359346063-d879354c0ea5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+              "url": "https://cdn.pixabay.com/photo/2019/06/05/17/57/fashion-4254240_640.jpg" 
           },
           {
-              "url": "https://images.unsplash.com/photo-1516828474992-30ba120acb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              "url": "https://cdn.pixabay.com/photo/2019/06/05/18/00/fashion-4254264_640.jpg"
           }
       ],
       "productPrice": 650,
-      "productDescription": "Experience the magic of summer sunsets with our Sunset Orange Summer Dress. Made with lightweight materials, the enchanting orange gradient captures the essence of summer evenings. Ideal for beach getaways or picnics, it's a sun-lover's dream.",
+      "productDescription": "Dive into the calming blues with our Oceanyrie Beach Wrap. Inspired by the gentle waves, this wrap is the perfect companion for a day on the sands. The free-flowing design lets you feel the ocean breeze.",
       "availableCampaigns": 0.8,
       "availableSize": [
           {
@@ -99,20 +99,20 @@
       ]
   },
   {
-      "productName": "Dessiey",
+      "productName": "Snowbella",
       "productSeriesEN": "NEW ARRIVALS",
-      "productSeriesZH": "最新到貨系列",
+      "productSeriesZH": "最新上市",
       "productID": "202",
       "productImages": [
           {
-              "url": "https://images.unsplash.com/photo-1583744999783-efe9dc5eac91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+              "url": "https://cdn.pixabay.com/photo/2017/09/19/21/30/fashion-2766711_640.jpg" 
           },
           {
-              "url": "https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=80"
+              "url": "https://cdn.pixabay.com/photo/2017/10/07/06/40/fashion-2825638_640.jpg"
           }
       ],
       "productPrice": 950,
-      "productDescription": "Enliven your wardrobe with our Chic Floral Blouse. Decorated with delicate floral patterns, it sports puffed sleeves and a tie-up collar that adds a dash of femininity to your work or casual look.",
+      "productDescription": "Embrace the winter wonderland with our Snowbella Padded Jacket. With soft insulation, this jacket promises warmth even in the coldest months. Its snowy white exterior reflects winter's purity.",
       "availableCampaigns": 1,
       "availableSize": [
           {
@@ -198,20 +198,23 @@
       ]
   },
   {
-      "productName": "kaleamorgan",
+      "productName": "Fallara",
       "productSeriesEN": "NEW ARRIVALS",
-      "productSeriesZH": "最新到貨系列",
+      "productSeriesZH": "最新上市",
       "productID": "203",
       "productImages": [
           {
-              "url": "https://images.unsplash.com/photo-1517267367903-519607b9060c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+              "url": "https://cdn.pixabay.com/photo/2017/10/05/06/31/girl-2818556_640.jpg"  
           },
           {
-              "url": "https://images.unsplash.com/photo-1517191297489-48c463380e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              "url": "https://cdn.pixabay.com/photo/2017/09/23/14/38/girl-2779067_640.jpg"
+          },
+          {
+              "url": "https://cdn.pixabay.com/photo/2017/10/05/06/31/girl-2818555_640.jpg"
           }
       ],
       "productPrice": 1250,
-      "productDescription": "Sculpt your silhouette with our High-Waist Pencil Skirt. Offered in classic black, its contour-enhancing fit is perfect for those power meetings or elegant dinners. Its soft material ensures comfort while exuding grace.",
+      "productDescription": "Experience autumn's charm with our Rustic Brown Fallara Sweater. Knitted with love, the earthy tones and patterns capture falling leaves, making it your cozy retreat for chilly days.",
       "availableCampaigns": 1,
       "availableSize": [
           {
@@ -297,20 +300,23 @@
       ]
   },
   {
-      "productName": "Leuraos",
+      "productName": "Vintique",
       "productSeriesEN": "NEW ARRIVALS",
-      "productSeriesZH": "最新到貨系列",
+      "productSeriesZH": "最新上市",
       "productID": "204",
       "productImages": [
           {
-              "url": "https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+              "url": "https://cdn.pixabay.com/photo/2021/05/17/01/53/fashion-6259591_640.jpg" 
           },
           {
-              "url": "https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              "url": "https://cdn.pixabay.com/photo/2021/05/17/01/46/fashion-6259576_640.jpg" 
+          },
+          {
+              "url": "https://cdn.pixabay.com/photo/2021/05/17/01/52/fashion-6259588_640.jpg"
           }
       ],
       "productPrice": 890,
-      "productDescription": "Elegant Lace Maxi Dress: Walk with grace in our Elegant Lace Maxi Dress. Crafted from the finest lace, this dress radiates romance. Perfect for formal occasions, it whispers tales of elegance with every step.",
+      "productDescription": "Revel in yesteryears with our Vintique Lace Dress. With intricate lace detailing and a timeless silhouette, it takes you back to an era of elegance. Perfect for vintage-themed parties.",
       "availableCampaigns": 1,
       "availableSize": [
           {
@@ -396,20 +402,20 @@
       ]
   },
   {
-      "productName": "Strivaces",
+      "productName": "Greentide",
       "productSeriesEN": "NEW ARRIVALS",
-      "productSeriesZH": "最新到貨系列",
+      "productSeriesZH": "最新上市",
       "productID": "205",
       "productImages": [
           {
-              "url": "https://images.unsplash.com/photo-1627225793904-a2f900a6e4cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+              "url": "https://cdn.pixabay.com/photo/2023/01/26/03/48/tet-7745013_640.jpg" 
           },
           {
-              "url": "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              "url": "https://cdn.pixabay.com/photo/2023/01/26/03/49/tet-7745015_640.jpg"
           }
       ],
       "productPrice": 680,
-      "productDescription": "Relive the charm of yesteryears with our Retro Polka-Dot Jumpsuit. With its vintage-inspired design and relaxed fit, it's the perfect blend of comfort and style for those laid-back days.",
+      "productDescription": "Step into spring with our Greentide Midi Skirt. Designed with fresh green hues, it resonates with blooming meadows. The pleated design dances with every step you take.",
       "availableCampaigns": 1,
       "availableSize": [
           {
@@ -495,20 +501,20 @@
       ]
   },
   {
-      "productName": "Saieyer",
+      "productName": "Nocturnelle",
       "productSeriesEN": "NEW ARRIVALS",
-      "productSeriesZH": "最新到貨系列",
+      "productSeriesZH": "最新上市",
       "productID": "206",
       "productImages": [
           {
-              "url": "https://images.unsplash.com/photo-1589742117142-4c08de5aabcf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+              "url": "https://cdn.pixabay.com/photo/2019/06/22/18/30/woman-4292203_640.jpg" 
           },
           {
-              "url": "https://images.unsplash.com/photo-1589742067167-9683bf95ab54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+              "url": "https://cdn.pixabay.com/photo/2019/06/22/18/31/woman-4292207_640.jpg"
           }
       ],
       "productPrice": 950,
-      "productDescription": "White Embroidered Cardigan: Embrace the breezy spring and summer with our White Embroidered Cardigan. Its delicate embroidery details promise a touch of sophistication, making it a perfect layer for those slightly chilly evenings.",
+      "productDescription": "Explore the mystique of the night with our Nocturnelle Black Gown. The shimmering fabric, reminiscent of the starry sky, makes you the center of attention at any evening event.",
       "availableCampaigns": 1,
       "availableSize": [
           {

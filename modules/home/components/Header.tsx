@@ -6,6 +6,7 @@ import { useStore } from "@/store";
 import { Cart } from "@/components/Cart";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 const Prefixbar = styled("section")`
   width: 100%;
@@ -61,7 +62,7 @@ const Logobar = styled("div")`
   }
   .MuiButtonBase-root {
     position: absolute;
-    right: 20px;
+    right: 10px;
     border-radius: 5px;
     border: 1px solid gray;
     margin: 10px 0;
@@ -82,17 +83,17 @@ const Menubar = styled("ul")`
   margin-top: 30px;
   margin-bottom: 10px;
   gap: 40px;
-  li {
+  a {
     color: rgba(0, 0, 0, 0.55);
     letter-spacing: 2px;
     transition: all 0.3s;
     cursor: pointer;
   }
-  li:hover {
+  a:hover {
     color: rgb(227, 170, 4);
     transform: scale(1.1);
   }
-  li:last-child {
+  a:last-child {
     color: red;
   }
 `;
@@ -102,15 +103,17 @@ const MotionedMobileMenubar = motion(styled("div")`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.35);
   padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   background: white;
-  li {
+  a {
     width: 75%;
     padding: 15px 0;
+    display: block;
     margin-right: auto;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.55);
@@ -118,12 +121,23 @@ const MotionedMobileMenubar = motion(styled("div")`
   }
   ul:nth-of-type(2) {
     height: max-content;
-    li {
+    a {
       border-bottom: none;
       padding: 10px 0;
     }
   }
 `);
+const MobileMnueShadow = styled("div")`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 3;
+`
 
 function Header() {
   const router = useRouter();
@@ -165,12 +179,13 @@ function Header() {
             {!isMobile && (
               <Menubar>
                 {shopMenuItems?.map((item, idx) => (
-                  <li
+                  <Link 
                     key={idx}
-                    onClick={() => router.push(`/${item.toLowerCase().replace(' ', '')}`)}
+                    href={`/${item.toLowerCase().replace(' ', '')}`}
+                    onClick={() => setMobileMenuVisible(false)}
                   >
                     {item}
-                  </li>
+                  </Link>
                 ))}
               </Menubar>
             )}
@@ -185,25 +200,27 @@ function Header() {
               >
                 <ul>
                   {shopMenuItems?.map((item, idx) => (
-                    <li 
+                    <Link 
                       key={idx}
-                      onClick={() => router.push(`/${item.toLowerCase().replace(' ', '')}`)}
+                      href={`/${item.toLowerCase().replace(' ', '')}`}
+                      onClick={() => setMobileMenuVisible(false)}
                     >
                       {item}
-                    </li>
+                    </Link>
                   ))}
                 </ul>
                 <ul>
-                  <li onClick={() => {
+                  <Link href="#" onClick={() => {
                     setCartVisible(true)
                     setMobileMenuVisible(false)
                   }}>
                     {"購物車"}
                     {!!cartContent.length && `(${cartContent.length})`}
-                  </li>
-                  <li>登入/註冊</li>
+                  </Link>
+                  <Link href="#">登入/註冊</Link>
                 </ul>
-              </MotionedMobileMenubar>          
+              </MotionedMobileMenubar>
+              <MobileMnueShadow onClick={() => setMobileMenuVisible((prev) => !prev)} />      
             </AnimatePresence>
           )}
         </>

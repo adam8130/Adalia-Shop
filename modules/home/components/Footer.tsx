@@ -1,6 +1,9 @@
 import { styled, Grid, Button, useMediaQuery } from "@mui/material";
 import { Facebook } from "@mui/icons-material";
 import { InstagramIcon, LineIcon } from "@/public/svgs";
+import { useStore } from "@/store";
+import Link from "next/link";
+import { observer } from "mobx-react-lite";
 
 const RootGrid = styled(Grid)`
   width: 100%;
@@ -15,14 +18,20 @@ const Menubar = styled("div")`
   gap: 10px;
   padding: 40px 0;
   h1 {
-    font-size: 28px;
+    font-size: 32px;
+    letter-spacing: 2px;
     font-weight: 300;
   }
   h4 {
+    padding: 4px 0;
+    font-weight: 300;
+  }
+  a {
     font-weight: 300;
   }
   .MuiButtonBase-root {
     font-weight: 300;
+    padding: 3px 8px;
     svg {
       fill: currentColor;
     }
@@ -30,19 +39,19 @@ const Menubar = styled("div")`
 `;
 
 function Footer() {
-  const isMobile = useMediaQuery("(max-width:768px)");
+  const isMobile = useMediaQuery('(max-width:768px)');
+  const { shopMenuItems } = useStore();
 
   return (
     <RootGrid container>
       {!isMobile && (
         <Grid item xs={false} sm={4} md={4} columnSpacing={2}>
           <Menubar>
-            <div>ALL</div>
-            <div>NEW ARRIVALS</div>
-            <div>RANKING</div>
-            <div>TOPS</div>
-            <div>DRESS</div>
-            <div>KNITWEAR</div>
+            {shopMenuItems?.map((item) => (
+              <Link key={item} href={`/${item.toLowerCase().replace(" ", "")}`}>
+                {item}
+              </Link>
+            ))}
           </Menubar>
         </Grid>
       )}
@@ -61,11 +70,10 @@ function Footer() {
           <Button startIcon={<InstagramIcon/>} color="inherit">Instgram</Button>
           <Button startIcon={<Facebook/>} color="inherit">Facebook</Button>
           <Button startIcon={<LineIcon/>} color="inherit">Line</Button>
-          
         </Menubar>
       </Grid>
     </RootGrid>
   );
 }
 
-export default Footer;
+export default observer(Footer);
