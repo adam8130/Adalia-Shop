@@ -4,11 +4,15 @@ import { getHomeLayout } from '@/layout/HomeLayout'
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Home from '@/modules/home/Home';
-import Loading from '@/components/Loading';
-import { useGetAllProductsQuery } from '@/__generated__/types';
+import { Loading } from '@/components/Loading';
+import { useGetAllSeriesProductsQuery } from '@/__generated__/types';
 
 function App() {
-  const { loading, data, error } = useGetAllProductsQuery()
+  const { loading, data, error } = useGetAllSeriesProductsQuery({
+    variables: { 
+      quantity: 3
+    }
+  })
 
   if (loading && !data) return <Loading />;
 
@@ -17,7 +21,7 @@ function App() {
       <Head>
         <title key="title">Adalia | Home</title>
       </Head>
-      {data && <Home allProducts={data.getAllProducts} /> }
+      {data && <Home allProducts={data.getAllSeriesProducts} /> }
     </>
   )
 }

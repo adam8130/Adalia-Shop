@@ -16,11 +16,11 @@ const resolvers = {
     getSpringSeries: () => springDB,
     getAutumnSeries: () => autumnDB,
     getNewArrivalsSeries: () => newArrivalsDB,
-    getAllProducts: () => {
+    getAllSeriesProducts: (_, { quantity }) => {
       const products = [
-        { series: "SPRING", products: getRandomItems(springDB, 3) },
-        { series: "AUTUMN", products: getRandomItems(autumnDB, 3) },
-        { series: "NEW ARRIVALS", products :getRandomItems(newArrivalsDB, 3) }
+        { series: "SPRING", products: getRandomItems(springDB, quantity) },
+        { series: "AUTUMN", products: getRandomItems(autumnDB, quantity) },
+        { series: "NEW ARRIVALS", products :getRandomItems(newArrivalsDB, quantity) }
       ];
       return products;
     },

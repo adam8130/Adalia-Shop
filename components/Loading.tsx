@@ -6,14 +6,14 @@ const Root = styled("div")`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(200, 200, 200, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   span {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     display: inline-block;
     margin: 0 5px;
     animation: bounce 0.6s infinite alternate;
@@ -59,7 +59,7 @@ const Root = styled("div")`
   }
 `;
 
-export default function Loading() {
+export function Loading() {
   return (
     <Root>
       <span>L</span>

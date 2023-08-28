@@ -9,17 +9,17 @@ export type ImageFieldPolicy = {
   url?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type ShopSettingsKeySpecifier = (
-  | "menubarItems"
-  | "payment"
-  | "delivery"
+  | "shopMenuItems"
+  | "shopPayment"
+  | "shopDelivery"
   | "shopTips"
   | "shopCampaigns"
   | ShopSettingsKeySpecifier
 )[];
 export type ShopSettingsFieldPolicy = {
-  menubarItems?: FieldPolicy<any> | FieldReadFunction<any>;
-  payment?: FieldPolicy<any> | FieldReadFunction<any>;
-  delivery?: FieldPolicy<any> | FieldReadFunction<any>;
+  shopMenuItems?: FieldPolicy<any> | FieldReadFunction<any>;
+  shopPayment?: FieldPolicy<any> | FieldReadFunction<any>;
+  shopDelivery?: FieldPolicy<any> | FieldReadFunction<any>;
   shopTips?: FieldPolicy<any> | FieldReadFunction<any>;
   shopCampaigns?: FieldPolicy<any> | FieldReadFunction<any>;
 };
@@ -133,7 +133,7 @@ export type QueryKeySpecifier = (
   | "getSpringSeries"
   | "getAutumnSeries"
   | "getNewArrivalsSeries"
-  | "getAllProducts"
+  | "getAllSeriesProducts"
   | "getProductDetail"
   | QueryKeySpecifier
 )[];
@@ -142,7 +142,7 @@ export type QueryFieldPolicy = {
   getSpringSeries?: FieldPolicy<any> | FieldReadFunction<any>;
   getAutumnSeries?: FieldPolicy<any> | FieldReadFunction<any>;
   getNewArrivalsSeries?: FieldPolicy<any> | FieldReadFunction<any>;
-  getAllProducts?: FieldPolicy<any> | FieldReadFunction<any>;
+  getAllSeriesProducts?: FieldPolicy<any> | FieldReadFunction<any>;
   getProductDetail?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type StrictTypedTypePolicies = {

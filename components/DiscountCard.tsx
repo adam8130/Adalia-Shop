@@ -32,7 +32,7 @@ const DiscountBar = styled("div")`
   }
 `;
 
-function DiscountCard({ background }: {background: string}): JSX.Element {
+export function DiscountCard({ background }: {background: string}): JSX.Element {
   return (
     <Root style={{ backgroundImage: `${background}` }}>
       <DiscountBar>
@@ -42,6 +42,4 @@ function DiscountCard({ background }: {background: string}): JSX.Element {
       </DiscountBar>
     </Root>
   );
-}
-
-export default DiscountCard;
+};

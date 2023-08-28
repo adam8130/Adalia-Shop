@@ -76,7 +76,7 @@ export function ProductDescription({
 }) {
   const router = useRouter();
   const isMobile = useMediaQuery('(max-width:768px)');
-  const { payment, delivery } = useStore();
+  const { shopPayment, shopDelivery } = useStore();
   const { setRefsCallback } = useHoverImages();
 
   return (
@@ -88,13 +88,13 @@ export function ProductDescription({
         </Grid>
         <Grid item xs={12} md={4}>
           <h1>付款方式</h1>
-          {payment?.map((item, idx) => (
+          {shopPayment?.map((item, idx) => (
             <p key={idx}>
               {"- "}{item}
             </p>
           ))}
           <h1>運送方式</h1>
-          {delivery?.map((item, idx) => (
+          {shopDelivery?.map((item, idx) => (
             <p key={idx}>
               {"- "}{item}
             </p>

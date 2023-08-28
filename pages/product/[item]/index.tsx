@@ -5,12 +5,11 @@ import { GetServerSideProps } from "next";
 import { NextPageWithLayout } from "@/pages/_app";
 import { getHomeLayout } from "@/layout/HomeLayout";
 import Head from "next/head";
-import Loading from "@/components/Loading";
+import { Loading } from "@/components/Loading";
 import { useGetProductDetailQuery, ProductDetail } from "@/__generated__/types";
 
 function ProductPage() {
   const router = useRouter();
-
   const { loading, data, error } = useGetProductDetailQuery({
     variables: { 
       productID: router.query.product as string,

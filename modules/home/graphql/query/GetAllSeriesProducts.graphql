@@ -1,5 +1,5 @@
-query GetAllProducts {
-  getAllProducts {
+query GetAllSeriesProducts($quantity: Int!) {
+  getAllSeriesProducts(quantity: $quantity) {
     series
     products {
       productName

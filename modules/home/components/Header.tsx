@@ -3,7 +3,7 @@ import { Paper, InputBase, styled, useMediaQuery, Button } from "@mui/material";
 import { Search, Menu } from "@mui/icons-material";
 import { Observer, observer } from "mobx-react-lite";
 import { useStore } from "@/store";
-import { Cart } from "@/modules/product/components/Cart";
+import { Cart } from "@/components/Cart";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -127,8 +127,8 @@ const MotionedMobileMenubar = motion(styled("div")`
 
 function Header() {
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width:768px)");
-  const { cartVisible, cartContent, setCartVisible, menubarItems } = useStore();
+  const isMobile = useMediaQuery('(max-width:768px)');
+  const { cartVisible, cartContent, setCartVisible, shopMenuItems } = useStore();
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   return (
@@ -164,8 +164,13 @@ function Header() {
             </Logobar>
             {!isMobile && (
               <Menubar>
-                {menubarItems?.map((item, idx) => (
-                  <li key={idx} onClick={() => router.push(`${item.toLowerCase()}`)}>{item}</li>
+                {shopMenuItems?.map((item, idx) => (
+                  <li
+                    key={idx}
+                    onClick={() => router.push(`/${item.toLowerCase().replace(' ', '')}`)}
+                  >
+                    {item}
+                  </li>
                 ))}
               </Menubar>
             )}
@@ -179,8 +184,13 @@ function Header() {
                 exit={{ opacity: 0, left: "-100%" }}
               >
                 <ul>
-                  {menubarItems?.map((item, idx) => (
-                    <li key={idx} onClick={() => router.push(`${item.toLowerCase()}`)}>{item}</li>
+                  {shopMenuItems?.map((item, idx) => (
+                    <li 
+                      key={idx}
+                      onClick={() => router.push(`/${item.toLowerCase().replace(' ', '')}`)}
+                    >
+                      {item}
+                    </li>
                   ))}
                 </ul>
                 <ul>

@@ -1,8 +1,8 @@
 query GetShopSettings {
   getShopSettings {
-    menubarItems
-    payment
-    delivery
+    shopMenuItems
+    shopPayment
+    shopDelivery
     shopTips
     shopCampaigns
   }

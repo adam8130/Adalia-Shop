@@ -30,18 +30,18 @@ export const aShopSettings = (
   const relationshipsToOmit: Set<string> = new Set(_relationshipsToOmit);
   relationshipsToOmit.add("ShopSettings");
   return {
-    menubarItems:
-      overrides && overrides.hasOwnProperty("menubarItems")
-        ? overrides.menubarItems!
-        : ["temporibus"],
-    payment:
-      overrides && overrides.hasOwnProperty("payment")
-        ? overrides.payment!
-        : ["dicta"],
-    delivery:
-      overrides && overrides.hasOwnProperty("delivery")
-        ? overrides.delivery!
-        : ["provident"],
+    shopMenuItems:
+      overrides && overrides.hasOwnProperty("shopMenuItems")
+        ? overrides.shopMenuItems!
+        : ["ab"],
+    shopPayment:
+      overrides && overrides.hasOwnProperty("shopPayment")
+        ? overrides.shopPayment!
+        : ["consequatur"],
+    shopDelivery:
+      overrides && overrides.hasOwnProperty("shopDelivery")
+        ? overrides.shopDelivery!
+        : ["eos"],
     shopTips:
       overrides && overrides.hasOwnProperty("shopTips")
         ? overrides.shopTips!
@@ -324,9 +324,9 @@ export const aQuery = (
               ? ({} as Product)
               : aProduct({}, relationshipsToOmit),
           ],
-    getAllProducts:
-      overrides && overrides.hasOwnProperty("getAllProducts")
-        ? overrides.getAllProducts!
+    getAllSeriesProducts:
+      overrides && overrides.hasOwnProperty("getAllSeriesProducts")
+        ? overrides.getAllSeriesProducts!
         : [
             relationshipsToOmit.has("AllProductGroup")
               ? ({} as AllProductGroup)

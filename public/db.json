@@ -1,6 +1,6 @@
 {
     "shopSettings": {
-        "menubarItems": [
+        "shopMenuItems": [
             "ALL",
             "NEW ARRIVALS",
             "SPRING",
@@ -9,12 +9,12 @@
             "TOPS",
             "SALE"
         ],
-        "payment": [
+        "shopPayment": [
             "信用卡",
             "超商付款",
             "貨到付款"
         ],
-        "delivery": [
+        "shopDelivery": [
             "宅配",
             "超商取貨"
         ],

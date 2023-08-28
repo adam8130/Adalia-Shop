@@ -3,9 +3,9 @@ type Image {
 }
 
 type ShopSettings {
-  menubarItems: [String!]
-  payment: [String!]
-  delivery: [String!]
+  shopMenuItems: [String!]
+  shopPayment: [String!]
+  shopDelivery: [String!]
   shopTips: [String]
   shopCampaigns: [String]
 }
@@ -71,6 +71,6 @@ type Query {
   getSpringSeries: [Product!]!
   getAutumnSeries: [Product!]!
   getNewArrivalsSeries: [Product!]!
-  getAllProducts: [AllProductGroup!]!
+  getAllSeriesProducts(quantity: Int!): [AllProductGroup!]!
   getProductDetail(productID: String!, productSeriesEN: String!): ProductDetail
 }

@@ -9,19 +9,21 @@ class Store {
         makeAutoObservable(this)
     }
     
-    menubarItems: ShopSettings['menubarItems'] = []
+    // shop settings
+    shopMenuItems: ShopSettings['shopMenuItems'] = []
     shopTips: ShopSettings['shopTips'] = []
     shopCampaigns: ShopSettings['shopCampaigns'] = []
-    payment: ShopSettings['payment'] = []
-    delivery: ShopSettings['delivery'] = []
-    cartVisible = false
-    cartContent = []
-
-    setMenubarItems = (menubarItems: ShopSettings['menubarItems']) => this.menubarItems = menubarItems
+    shopPayment: ShopSettings['shopPayment'] = []
+    shopDelivery: ShopSettings['shopDelivery'] = []
+    setShopMenuItems = (shopMenuItems: ShopSettings['shopMenuItems']) => this.shopMenuItems = shopMenuItems
     setShopTips = (shopTips: ShopSettings['shopTips']) => this.shopTips = shopTips
     setShopCampaigns = (shopCampaigns: ShopSettings['shopCampaigns']) => this.shopCampaigns = shopCampaigns
-    setPayment = (payment: ShopSettings['payment']) => this.payment = payment
-    setDelivery = (delivery: ShopSettings['delivery']) => this.delivery = delivery
+    setShopPayment = (shopPayment: ShopSettings['shopPayment']) => this.shopPayment = shopPayment
+    setShopDelivery = (shopDelivery: ShopSettings['shopDelivery']) => this.shopDelivery = shopDelivery
+    
+    // cart
+    cartVisible = false
+    cartContent = []
     setCartVisible = (visible: boolean) => this.cartVisible = visible
     setCartContent = (updateFn: (prev: typeof this.cartContent) => any) => {
         this.cartContent = updateFn(this.cartContent);
