@@ -4,6 +4,7 @@ import { Button, Grid, Stack, styled, useMediaQuery } from "@mui/material";
 import { useStore } from "@/store";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getTradeInfo } from "@/modules/product/newebpay";
 
 const RootGrid = styled(Grid)`
   width: 90%;
@@ -209,7 +210,23 @@ export function ProductDetail({ product }: { product: Product }) {
           >
             加入購物車
           </Button>
-          <Button variant="outlined" color="success">立即購買</Button>
+          <Button 
+            variant="outlined" 
+            color="success"
+            onClick={() => getTradeInfo({
+              productName: product.productName,
+              productID: product.productID,
+              productSeriesEN: product.productSeriesEN,
+              productSeriesZH: product.productSeriesZH,
+              productThumbnail: product.productImages[0].url,
+              selectedSize: product.availableSize?.[currentSizeIdx].size,
+              selectedColor: product.availableSize?.[currentSizeIdx]?.stock?.[currentColorIdx]?.color,
+              selectedQuantity: currentQuantity,
+              totalPrice: currentQuantity * product.productPrice
+            })}
+          >
+            立即購買
+          </Button>
         </Stack>
       </DetailGrid>
     </RootGrid>

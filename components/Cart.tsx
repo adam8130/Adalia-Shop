@@ -6,6 +6,7 @@ import { useStore } from "@/store";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
+import { getTradeInfo } from "@/modules/product/newebpay";
 
 const MotionedRoot = motion(styled("div")(
   ({ mobile }: { mobile: number }) => `
@@ -242,7 +243,11 @@ export function Cart({ cartContent }: { cartContent: CartContent[] }) {
                 確定
               </Button>
               {cartContent[cartContent.length - 1].isPreviouslyAdded && (
-                <Button color="info" variant="outlined">
+                <Button 
+                  color="info" 
+                  variant="outlined"
+                  onClick={() => getTradeInfo(cartContent as CartContent)}
+                >
                   結帳
                 </Button>
               )}

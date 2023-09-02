@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
+const newebpay = require('./newebpay');
 const { ApolloServerPluginDrainHttpServer } = require('@apollo/server/plugin/drainHttpServer');
 const http = require('http');
 
@@ -39,26 +40,26 @@ nextApp.prepare()
   })
   .then(() => {
     app.use(favicon(path.join(__dirname, '/public/favicon.ico')));
-
     app.use((err, req, res, next) => {
       console.error(err.stack);
       res.status(500).send('Something broke!');
     });
-    
+    app.use(
+      cors(),
+      bodyParser.json()
+    )
     app.use(morgan('combined', {
       skip: function (_, res) {
         return res.statusCode < 400;
       },
     }))
     
+    app.post('/api/newebpay', newebpay);
     app.get('*', (req, res) => {
       return handler(req, res);
     });
-
     app.use(
       '/',
-      cors(),
-      bodyParser.json(),
       expressMiddleware(server)
     );
 

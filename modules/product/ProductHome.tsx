@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 function ProductHome({ productDetail }: { productDetail: ProductDetailType }) {
   const router = useRouter();
-  console.log(router)
+
   return (
     <>
       <ProductDetail product={productDetail.product!} />
