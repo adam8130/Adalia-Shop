@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Grid, styled } from "@mui/material";
+import { Grid, styled, useMediaQuery } from "@mui/material";
 import { AllProductGroup } from "@/__generated__/types";
 import Image from "next/image";
 import { useHoverImages } from "@/hooks/useHoverImages";
@@ -10,14 +10,14 @@ const Root = styled("div")`
   padding: 20px 40px;
   display: flex;
 `;
-const ProductWrapper = styled("div")`
+const ProductWrapper = styled("div")<{mobile: number}>(({ mobile }) => `
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   div {
-    width: 420px;
-    height: 580px;
+    width: ${mobile ? '330px' : '420px'};
+    height: ${mobile ? '430px' : '580px'};
   }
   span {
     margin-top: 8px;
@@ -34,12 +34,14 @@ const ProductWrapper = styled("div")`
   img:hover {
     cursor: pointer;
   }
-`;
+`)
+;
 
 function ProductWall({ productList }: { productList: AllProductGroup[] }): JSX.Element {
   
   const router = useRouter();
   const { setRefsCallback } = useHoverImages();
+  const isMobile = useMediaQuery('(max-width:768px)');
 
   return (
     <Root>
@@ -54,6 +56,7 @@ function ProductWall({ productList }: { productList: AllProductGroup[] }): JSX.E
             columnSpacing={2}
           >
             <ProductWrapper
+              mobile={Number(isMobile)}
               onClick={() => router.push({ 
                 pathname: `/product/${item.productSeriesEN.toLocaleLowerCase().replace(' ', '')}`, 
                 query: { product: item.productID } 
