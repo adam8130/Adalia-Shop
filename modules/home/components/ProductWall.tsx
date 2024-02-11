@@ -16,8 +16,8 @@ const ProductWrapper = styled("div")`
   flex-direction: column;
   align-items: center;
   div {
-    width: 250px;
-    height: 350px;
+    width: 420px;
+    height: 580px;
   }
   span {
     margin-top: 8px;
