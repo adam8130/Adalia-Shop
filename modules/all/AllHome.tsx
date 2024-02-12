@@ -31,8 +31,8 @@ const ContainerGrid = styled(Grid)(
       text-align: center;
       margin: ${mobile ? '10px 0' : '0'};
       div {
-        width: ${mobile ? '150px' : '380px'};
-        height: ${mobile ? '200px' : '540px'};
+        width: ${mobile ? '150px' : '320px'};
+        height: ${mobile ? '200px' : '480px'};
         margin: auto;
         cursor: pointer;
       }
