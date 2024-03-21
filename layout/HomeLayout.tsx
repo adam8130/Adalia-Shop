@@ -37,9 +37,6 @@ function LayoutWrapper({ children }: { children: React.ReactNode }): JSX.Element
 
 export const getHomeLayout = (page: React.ReactNode): JSX.Element => (
   <>
-    <Head>
-      {/* <script/> */}
-    </Head>
     <LayoutWrapper>{page}</LayoutWrapper>
   </>
 );

@@ -5,7 +5,7 @@ const nextConfig = {
         domains: [
             'images.unsplash.com',
             'cdn.pixabay.com',
-            'shop.adalia.pp.ua'
+            'shop.adonia.ink'
         ],
     },
     async redirects() {
